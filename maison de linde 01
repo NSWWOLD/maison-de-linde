@@ -1,0 +1,288 @@
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison de l'Inde – Restaurant Indien</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ================= VARIABLES ================= */
+:root {
+    --saffron: #D97706;
+    --green: #0F3D2E;
+    --red: #7A1F1F;
+    --ivory: #FAF7F2;
+    --dark: #1c1c1c;
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--ivory);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ================= NAV ================= */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(28,28,28,0.9);
+    padding: 14px 0;
+    text-align: center;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--saffron);
+}
+
+/* ================= HEADER ================= */
+header {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(15,61,46,0.65), rgba(15,61,46,0.65)),
+        url("https://images.unsplash.com/photo-1604908177522-040ff3f8b1c3") center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 14px;
+    opacity: 0.9;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 20px;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.6rem;
+    color: var(--green);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ================= LIVRAISON ================= */
+.delivery-message {
+    background: var(--saffron);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: auto;
+}
+
+/* ================= MENU ================= */
+.menu-section {
+    margin-bottom: 80px;
+}
+
+.menu-section h3 {
+    font-size: 1.9rem;
+    color: var(--red);
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.dish {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2d4b8;
+}
+
+.dish:last-child {
+    border-bottom: none;
+}
+
+.dish-info {
+    max-width: 78%;
+}
+
+.dish-name {
+    font-weight: 600;
+}
+
+.dish-desc {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--saffron);
+    white-space: nowrap;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 90px 30px;
+}
+
+.contact p {
+    margin: 14px 0;
+    font-size: 1.1rem;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 28px;
+    font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.6rem;
+    }
+
+    .dish {
+        flex-direction: column;
+    }
+
+    .price {
+        margin-top: 6px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header id="accueil">
+    <h1>Maison de l'Inde</h1>
+    <p>Restaurant Indien – Spécialités du Nord de l'Inde</p>
+</header>
+
+<section>
+    <div class="delivery-message">
+        📦 Livraison dans un périmètre de 15 km<br>
+        Lundi → Jeudi : horaires habituels<br>
+        Vendredi & Samedi : matin uniquement
+    </div>
+</section>
+
+<section id="menu">
+    <h2>Notre Menu</h2>
+
+    <div class="menu-section">
+        <h3>Entrées</h3>
+
+        <div class="dish">
+            <div class="dish-info">
+                <div class="dish-name">Entrée Mix (2 pers.)</div>
+                <div class="dish-desc">Viandes & légumes frits</div>
+            </div>
+            <div class="price">20 €</div>
+        </div>
+
+        <div class="dish">
+            <div class="dish-info">
+                <div class="dish-name">Assortiment de beignets (2 pers.)</div>
+                <div class="dish-desc">Légumes</div>
+            </div>
+            <div class="price">16 €</div>
+        </div>
+
+        <div class="dish">
+            <div class="dish-info">
+                <div class="dish-name">Shammi Kebab</div>
+                <div class="dish-desc">Croquettes de viande à la cardamome</div>
+            </div>
+            <div class="price">10 €</div>
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <h3>Biryani</h3>
+
+        <div class="dish">
+            <div class="dish-info">
+                <div class="dish-name">Poulet Biryani</div>
+            </div>
+            <div class="price">19 €</div>
+        </div>
+
+        <div class="dish">
+            <div class="dish-info">
+                <div class="dish-name">Agneau Biryani</div>
+            </div>
+            <div class="price">21 €</div>
+        </div>
+
+        <div class="dish">
+            <div class="dish-info">
+                <div class="dish-name">Végétarien Biryani</div>
+            </div>
+            <div class="price">17 €</div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>📍 60 avenue du Général de Gaulle, 68300 Saint-Louis</p>
+    <p>📞 09 53 41 65 14 / 06 27 57 44 13</p>
+    <p>📸 Instagram : @maison_de_linde</p>
+</section>
+
+<footer>
+    © 2026 Maison de l'Inde – Cuisine Indienne du Nord
+</footer>
+
+</body>
+</html>

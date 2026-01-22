@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maison de l'Inde — Restaurant indien</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ribbon (fixe en haut) -->
+  <div id="deliveryRibbon" class="delivery-ribbon" role="region" aria-label="Annonce livraison">
+    <div class="ribbon-content">
+      <span class="gift">🎁</span>
+      <strong>Livraison à domicile :</strong>
+      <span id="ribbonText">Livraison disponible dans un rayon de 15 km autour de notre restaurant. Appelez-nous au 09 53 41 65 14. Livraisons du lundi au jeudi pendant nos horaires d'ouverture, et le vendredi matin & samedi matin seulement.</span>
+      <button id="closeRibbon" class="close-ribbon" aria-label="Fermer la bannière">&times;</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen popup (overlay) -->
+  <div id="deliveryModal" class="delivery-modal" aria-hidden="true" role="dialog" aria-label="Annonce livraison">
+    <div class="modal-panel" role="document">
+      <div class="modal-header">
+        <h2>🎁 Livraison à domicile</h2>
+      </div>
+      <div class="modal-body">
+        <p id="modalText">
+          Livraison disponible dans un rayon de 15 km autour de notre restaurant.
+          Horaires de livraison : du lundi au jeudi pendant nos horaires d'ouverture, ainsi que le vendredi matin et le samedi matin uniquement.
+          Appelez-nous pour commander au 09 53 41 65 14.
+        </p>
+      </div>
+      <div class="modal-actions">
+        <button id="closeModal" class="btn">D'accord</button>
+        <button id="closeModalThisVisit" class="btn alt">Fermer pour cette visite</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Maison de l'Inde</h1>
+        <p class="tagline">Restaurant indien — Spécialités du Nord de l'Inde</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro card">
+      <h2>Bienvenue</h2>
+      <p>Maison de l'Inde vous propose une cuisine indienne authentique, sur place ou à emporter. Plats faits maison, recettes traditionnelles et service chaleureux. Pensez à réserver pour vos fêtes : mariages, baptêmes, anniversaires.</p>
+
+      <div class="actions">
+        <a class="btn" id="downloadMenu" href="menu.pdf" download>Télécharger le menu (PDF)</a>
+        <button class="btn alt" id="showMenu">Voir le menu</button>
+      </div>
+    </section>
+
+    <section class="menu card" id="menuSection" aria-labelledby="menuTitle">
+      <h2 id="menuTitle">Le menu complet</h2>
+
+      <div class="full-menu">
+        <!-- (Le contenu complet du menu — tel que dans le snippet — sera collé ici) -->
+      </div>
+
+      <p class="note">Le menu complet est également disponible au format PDF téléchargeable ci‑dessous.</p>
+    </section>
+
+    <section class="info card">
+      <h2>Infos pratiques</h2>
+      <p><strong>Adresse :</strong> 60, avenue du Général de Gaulle — 68300 ST LOUIS</p>
+      <p><strong>Téléphone :</strong> 09 53 41 65 14 / 06 27 57 44 13</p>
+      <p><strong>Horaires :</strong> du lundi au samedi : 11h30–14h30 et 17h30–23h00 — Fermé le dimanche</p>
+      <p><strong>Site :</strong> <a href="https://www.maisondelinde.fr" target="_blank" rel="noopener">www.maisondelinde.fr</a></p>
+      <p><strong>Suivez-nous :</strong> Instagram <code>@maison_de_linde</code></p>
+      <p><strong>Sur place ou à emporter</strong></p>
+      <p>Pensez à réserver pour vos fêtes : Mariage, Baptêmes, Anniversaires</p>
+    </section>
+
+    <section class="embed-pdf card" id="pdfEmbed">
+      <h2>Menu (aperçu)</h2>
+      <div class="pdf-container" id="pdfContainer">
+        <iframe src="menu.pdf" title="Menu PDF" frameborder="0" id="pdfFrame"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2026 Maison de l'Inde — 60, avenue du Général de Gaulle, 68300 ST LOUIS</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+:root{
+  --accent:#f28c08;
+  --accent-dark:#7a3d00;
+  --bg:#fff5e6;
+  --card:#fffaf3;
+  --muted:#6b5a4a;
+  --velvet:#9b0606;
+}
+
+/* Reset et base */
+*{box-sizing:border-box}
+body{
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:#222;
+}
+.wrap{ max-width:980px; margin:0 auto; padding:20px; }
+
+/* Ribbon en haut */
+.delivery-ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg,#b30a0a 0%, var(--velvet) 50%, #7a0505 100%);
+  color: #fff;
+  z-index: 9999;
+  padding: 10px 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+.delivery-ribbon .ribbon-content { max-width:980px; width:100%; padding:4px 10px; display:flex; align-items:center; gap:12px; }
+.delivery-ribbon .ribbon-content strong { margin-right:8px; }
+.delivery-ribbon .gift { font-size:22px; margin-right:8px; }
+.close-ribbon {
+  margin-left:auto;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+  padding:4px 10px;
+}
+
+/* Pour éviter que le contenu soit sous la ribbon */
+.site-header { margin-top:56px; }
+
+/* Modal overlay (plein écran) */
+.delivery-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 10000;
+  padding: 20px;
+}
+.delivery-modal[aria-hidden="false"] { display:flex; }
+
+.modal-panel {
+  background: linear-gradient(180deg,#fff8f6,#fff0ee);
+  border-radius: 12px;
+  max-width:760px;
+  width:100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border: 6px solid rgba(139,18,18,0.12);
+  overflow: hidden;
+}
+.modal-header { background: linear-gradient(90deg,var(--velvet),#8b0505); color: #fff; padding:18px; }
+.modal-header h2 { margin:0; font-size:1.4rem; }
+.modal-body { padding:18px; color: #222; font-size:1rem; }
+.modal-actions { padding: 12px 18px 18px; display:flex; gap:10px; justify-content:flex-end; }
+
+/* Buttons */
+.btn{ padding:10px 14px; border-radius:8px; background:var(--accent); color:#fff; border:0; cursor:pointer; font-weight:700; }
+.btn.alt{ background: transparent; color:var(--accent-dark); border:1px solid rgba(160,75,4,0.08); }
+
+/* Rest of site styles (cards, menu) */
+.card{ background:var(--card); border-radius:10px; padding:18px; margin-top:18px; box-shadow: 0 8px 20px rgba(45,30,10,0.03); border:1px solid rgba(160,75,4,0.04); }
+.actions{ margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
+.menu-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:10px; }
+.menu-row{ display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed rgba(0,0,0,0.03); }
+.dish{ color:var(--accent-dark); }
+.price{ color:var(--accent); font-weight:700; }
+.note{ margin-top:12px; color:var(--muted); font-size:0.95rem; }
+
+.pdf-container{ background:white; border-radius:8px; border:1px solid #efe3d0; overflow:hidden; margin-top:12px; }
+.pdf-container iframe{ width:100%; height:520px; display:block; border:0; }
+
+.site-footer{ margin-top:26px; padding:18px 0; text-align:center; color:var(--muted); font-size:0.9rem; }
+
+/* Responsive */
+@media(max-width:720px){
+  .delivery-ribbon .ribbon-content { font-size:0.95rem; padding:6px; }
+  .modal-panel { padding:0; }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  const showMenuBtn = document.getElementById('showMenu');
+  const menuSection = document.getElementById('menuSection');
+  const downloadBtn = document.getElementById('downloadMenu');
+  const pdfFrame = document.getElementById('pdfFrame');
+
+  // --- Menu interactions ---
+  showMenuBtn && showMenuBtn.addEventListener('click', function() {
+    menuSection && menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  downloadBtn && downloadBtn.addEventListener('click', function() {
+    try {
+      const key = 'menu_downloads';
+      const count = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+      localStorage.setItem(key, String(count));
+      const oldText = downloadBtn.textContent;
+      downloadBtn.textContent = `Téléchargé (${count})`;
+      setTimeout(()=> downloadBtn.textContent = oldText, 2000);
+    } catch(e){}
+  });
+
+  // --- Delivery ribbon & modal (appear each visit; closing kept only for session) ---
+  const ribbon = document.getElementById('deliveryRibbon');
+  const closeRibbon = document.getElementById('closeRibbon');
+  const modal = document.getElementById('deliveryModal');
+  const closeModal = document.getElementById('closeModal');
+  const closeModalThisVisit = document.getElementById('closeModalThisVisit');
+
+  const ribbonSessionKey = 'delivery_ribbon_closed_session';
+  const modalSessionKey = 'delivery_modal_closed_session';
+
+  // Show modal on each new session (if not closed during this session)
+  if (!sessionStorage.getItem(modalSessionKey)) {
+    setTimeout(()=> {
+      if (modal) {
+        modal.setAttribute('aria-hidden','false');
+        modal.style.display = 'flex';
+      }
+    }, 700);
+  }
+
+  // If ribbon closed this session, hide it
+  if (sessionStorage.getItem(ribbonSessionKey) === 'true') {
+    ribbon && (ribbon.style.display = 'none');
+    const siteHeader = document.querySelector('.site-header');
+    if (siteHeader) siteHeader.style.marginTop = '0';
+  }
+
+  closeRibbon && closeRibbon.addEventListener('click', function() {
+    if (ribbon) ribbon.style.display = 'none';
+    sessionStorage.setItem(ribbonSessionKey, 'true'); // only for this session
+    const siteHeader = document.querySelector('.site-header');
+    if (siteHeader) siteHeader.style.marginTop = '0';
+  });
+
+  closeModal && closeModal.addEventListener('click', function() {
+    if (modal) {
+      modal.setAttribute('aria-hidden','true');
+      modal.style.display = 'none';
+    }
+  });
+
+  closeModalThisVisit && closeModalThisVisit.addEventListener('click', function() {
+    try {
+      sessionStorage.setItem(modalSessionKey, 'true'); // don't show again during this session
+    } catch(e){}
+    if (modal) {
+      modal.setAttribute('aria-hidden','true');
+      modal.style.display = 'none';
+    }
+  });
+
+  // small pdf fallback helper text
+  setTimeout(()=> {
+    if (pdfFrame) {
+      try {
+        const doc = pdfFrame.contentDocument || pdfFrame.contentWindow.document;
+        if (!doc || doc.body.childNodes.length === 0) {
+          const container = document.getElementById('pdfContainer');
+          const hint = document.createElement('p');
+          hint.style.marginTop = '8px';
+          hint.style.color = '#6b5a4a';
+          hint.textContent = 'Si l’aperçu ne s’affiche pas, utilisez le bouton "Télécharger le menu".';
+          container.appendChild(hint);
+        }
+      } catch(e){
+        // cross-origin can block checking; ignore
+      }
+    }
+  }, 1000);
+});

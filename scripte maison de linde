@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maison de l'Inde — Restaurant indien</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ribbon (fixe en haut) -->
+  <div id="deliveryRibbon" class="delivery-ribbon" role="region" aria-label="Annonce livraison">
+    <div class="ribbon-content">
+      <span class="gift">🎁</span>
+      <strong>Livraison à domicile :</strong>
+      <span id="ribbonText">Livraison disponible dans un rayon de 15 km autour de notre restaurant. Appelez-nous au 09 53 41 65 14. Livraisons du lundi au jeudi pendant nos horaires d'ouverture, et le vendredi matin & samedi matin seulement.</span>
+      <button id="closeRibbon" class="close-ribbon" aria-label="Fermer la bannière">&times;</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen popup (overlay) -->
+  <div id="deliveryModal" class="delivery-modal" aria-hidden="true" role="dialog" aria-label="Annonce livraison">
+    <div class="modal-panel" role="document">
+      <div class="modal-header">
+        <h2>🎁 Livraison à domicile</h2>
+      </div>
+      <div class="modal-body">
+        <p id="modalText">
+          Livraison disponible dans un rayon de 15 km autour de notre restaurant.
+          Horaires de livraison : du lundi au jeudi pendant nos horaires d'ouverture, ainsi que le vendredi matin et le samedi matin uniquement.
+          Appelez-nous pour commander au 09 53 41 65 14.
+        </p>
+      </div>
+      <div class="modal-actions">
+        <button id="closeModal" class="btn">D'accord</button>
+        <button id="closeModalThisVisit" class="btn alt">Fermer pour cette visite</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Maison de l'Inde</h1>
+        <p class="tagline">Restaurant indien — Spécialités du Nord de l'Inde</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro card">
+      <h2>Bienvenue</h2>
+      <p>Maison de l'Inde vous propose une cuisine indienne authentique, sur place ou à emporter. Plats faits maison, recettes traditionnelles et service chaleureux. Pensez à réserver pour vos fêtes : mariages, baptêmes, anniversaires.</p>
+
+      <div class="actions">
+        <a class="btn" id="downloadMenu" href="menu.pdf" download>Télécharger le menu (PDF)</a>
+        <button class="btn alt" id="showMenu">Voir le menu</button>
+      </div>
+    </section>
+
+    <section class="menu card" id="menuSection" aria-labelledby="menuTitle">
+      <h2 id="menuTitle">Le menu complet</h2>
+
+      <div class="full-menu">
+        <!-- Entrées -->
+        <h3>ENTRÉES — Beignets & Salades</h3>
+        <div class="menu-row"><span class="dish">Entrée Mix (viande &amp; légumes) pour 2 pers.</span><span class="price">20,00 €</span></div>
+        <div class="menu-row"><span class="dish">Assortiments de beignets (pour 2 pers.)</span><span class="price">16,00 €</span></div>
+        <div class="menu-row"><span class="dish">Shammi kebab (croquettes de viande hachée parfumées à la cardamome)</span><span class="price">11,00 €</span></div>
+        <div class="menu-row"><span class="dish">Onion bajia (beignets d'oignons)</span><span class="price">8,00 €</span></div>
+        <div class="menu-row"><span class="dish">Vegetable samossa (chaussons de légumes)</span><span class="price">9,00 €</span></div>
+        <div class="menu-row"><span class="dish">Salade verte à la façon indienne</span><span class="price">8,00 €</span></div>
+        <div class="menu-row"><span class="dish">Raita (yaourt au concombre parfumé au cumin)</span><span class="price">7,00 €</span></div>
+        <div class="menu-row"><span class="dish">Crevette Pakora (crevettes avec farine de pois chiches)</span><span class="price">12,00 €</span></div>
+        <div class="menu-row"><span class="dish">Fromage Pakora (fromage avec farine de pois)</span><span class="price">9,00 €</span></div>
+        <div class="menu-row"><span class="dish">Beigan Pakora</span><span class="price">9,00 €</span></div>
+
+        <h3>ENTRÉES — GRILLADES INDIENNES</h3>
+        <div class="menu-row"><span class="dish">Assortiment de tandoris (2 pers.) Gambas, brochettes de poulets, agneau et poisson</span><span class="price">30,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet tandoori (poulet mariné au yaourt et aux épices et grillé)</span><span class="price">12,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet tikka (dés de poulet marinés)</span><span class="price">12,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau tikka</span><span class="price">16,00 €</span></div>
+        <div class="menu-row"><span class="dish">Seekh kebab (brochette d'agneau haché)</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poisson tikka</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Gambas tandoori</span><span class="price">24,00 €</span></div>
+
+        <h3>PAINS (tandoor)</h3>
+        <div class="menu-row"><span class="dish">Roti</span><span class="price">4,00 €</span></div>
+        <div class="menu-row"><span class="dish">Nân</span><span class="price">3,50 €</span></div>
+        <div class="menu-row"><span class="dish">Nân fromage</span><span class="price">5,00 €</span></div>
+        <div class="menu-row"><span class="dish">Stuffed paraha</span><span class="price">6,00 €</span></div>
+        <div class="menu-row"><span class="dish">Keema nân</span><span class="price">6,00 €</span></div>
+        <div class="menu-row"><span class="dish">Nân à l'ail</span><span class="price">5,00 €</span></div>
+        <div class="menu-row"><span class="dish">Nân garlic fromage</span><span class="price">6,00 €</span></div>
+
+        <h3>AGNEAU</h3>
+        <div class="menu-row"><span class="dish">Agneau baigan (curry d'agneau avec des aubergines)</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau tikka masala</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau moghalai</span><span class="price">20,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau curry</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau sagwala</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau Hyderabadi</span><span class="price">20,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau madras</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau dal</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau shahi korma</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Agneau seek masala</span><span class="price">20,00 €</span></div>
+
+        <h3>POULET</h3>
+        <div class="menu-row"><span class="dish">Poulet tikka masala</span><span class="price">18,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet moghalai</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Butter chicken</span><span class="price">18,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet korma</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet curry</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet madras</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet palak</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet jalfrezi</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet Hyderabadi</span><span class="price">18,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet vindaloo</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet dal</span><span class="price">17,00 €</span></div>
+
+        <h3>CREVETTES</h3>
+        <div class="menu-row"><span class="dish">Crevettes curry</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Crevettes madras</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Crevettes jalfrezi</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Crevettes Hyderabadi</span><span class="price">20,00 €</span></div>
+        <div class="menu-row"><span class="dish">Crevettes sagwala</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Crevettes Korma</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Gambas masala</span><span class="price">26,00 €</span></div>
+
+        <h3>POISSON</h3>
+        <div class="menu-row"><span class="dish">Poisson Masala</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poisson Goa Curry</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poisson Madras</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poisson Hyderabadi</span><span class="price">20,00 €</span></div>
+        <div class="menu-row"><span class="dish">Noix de Saint Jacques masala</span><span class="price">25,00 €</span></div>
+
+        <h3>BIRYANIS</h3>
+        <div class="menu-row"><span class="dish">Agneau biryani</span><span class="price">22,00 €</span></div>
+        <div class="menu-row"><span class="dish">Poulet biryani</span><span class="price">19,00 €</span></div>
+        <div class="menu-row"><span class="dish">Vegetable biryani</span><span class="price">17,00 €</span></div>
+        <div class="menu-row"><span class="dish">Crevettes biryani</span><span class="price">21,00 €</span></div>
+        <div class="menu-row"><span class="dish">Biryani mixte tajmahal</span><span class="price">25,00 €</span></div>
+
+        <h3>LÉGUMES</h3>
+        <div class="menu-row"><span class="dish">Aloo gobhi</span><span class="price">16,00 €</span></div>
+        <div class="menu-row"><span class="dish">Aloo panir</span><span class="price">14,00 €</span></div>
+        <div class="menu-row"><span class="dish">Matar panir</span><span class="price">14,00 €</span></div>
+        <div class="menu-row"><span class="dish">Sag aloo</span><span class="price">15,00 €</span></div>
+        <div class="menu-row"><span class="dish">Baigan bharta</span><span class="price">15,00 €</span></div>
+        <div class="menu-row"><span class="dish">Légumes korma</span><span class="price">15,00 €</span></div>
+        <div class="menu-row"><span class="dish">Mixte dal</span><span class="price">15,00 €</span></div>
+        <div class="menu-row"><span class="dish">Palak panir</span><span class="price">16,00 €</span></div>
+        <div class="menu-row"><span class="dish">Dal palak</span><span class="price">15,00 €</span></div>
+        <div class="menu-row"><span class="dish">Butter Paneer</span><span class="price">16,00 €</span></div>
+
+        <h3>RIZ</h3>
+        <div class="menu-row"><span class="dish">Kashmiri pulao</span><span class="price">7,00 €</span></div>
+        <div class="menu-row"><span class="dish">Safran</span><span class="price">6,00 €</span></div>
+        <div class="menu-row"><span class="dish">Riz nature</span><span class="price">5,00 €</span></div>
+
+        <h3>DESSERT</h3>
+        <div class="menu-row"><span class="dish">Gâteau maison</span><span class="price">6,00 €</span></div>
+        <div class="menu-row"><span class="dish">Pistache kulfi</span><span class="price">8,00 €</span></div>
+        <div class="menu-row"><span class="dish">Gulab jamun</span><span class="price">6,00 €</span></div>
+        <div class="menu-row"><span class="dish">Glace pendjab</span><span class="price">5,00 €</span></div>
+        <div class="menu-row"><span class="dish">Assiette maison</span><span class="price">12,00 €</span></div>
+        <div class="menu-row"><span class="dish">Salade de fruits fraîche</span><span class="price">6,00 €</span></div>
+        <div class="menu-row"><span class="dish">Sorbets</span><span class="price">5,00 €</span></div>
+
+      </div>
+
+      <p class="note">Le menu complet est également disponible au format PDF téléchargeable ci‑dessous.</p>
+    </section>
+
+    <section class="info card">
+      <h2>Infos pratiques</h2>
+      <p><strong>Adresse :</strong> 60, avenue du Général de Gaulle — 68300 ST LOUIS</p>
+      <p><strong>Téléphone :</strong> 09 53 41 65 14 / 06 27 57 44 13</p>
+      <p><strong>Horaires :</strong> du lundi au samedi : 11h30–14h30 et 17h30–23h00 — Fermé le dimanche</p>
+      <p><strong>Site :</strong> <a href="https://www.maisondelinde.fr" target="_blank" rel="noopener">www.maisondelinde.fr</a></p>
+      <p><strong>Suivez-nous :</strong> Instagram <code>@maison_de_linde</code></p>
+      <p><strong>Sur place ou à emporter</strong></p>
+      <p>Pensez à réserver pour vos fêtes : Mariage, Baptêmes, Anniversaires</p>
+    </section>
+
+    <section class="embed-pdf card" id="pdfEmbed">
+      <h2>Menu (aperçu)</h2>
+      <div class="pdf-container" id="pdfContainer">
+        <iframe src="menu.pdf" title="Menu PDF" frameborder="0" id="pdfFrame"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2026 Maison de l'Inde — 60, avenue du Général de Gaulle, 68300 ST LOUIS</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -105,3 +105,21 @@ body{
 
 /* small focus styles */
 :focus { outline: 3px solid rgba(242,140,8,0.3); outline-offset:2px; }
+.site-header,
+.site-footer {
+  position: relative;
+  background-color: #fffaf3;
+}
+
+.site-header::before,
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/taj-mahal-floral.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  opacity: 0.08;
+  pointer-events: none;
+}

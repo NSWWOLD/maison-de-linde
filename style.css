@@ -27,6 +27,17 @@ body {
   background-attachment: fixed;
   color: #222;
 }
+/* ⬇️ AJOUTE JUSTE APRÈS */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("assets/tajmahal.svg") center center no-repeat;
+  background-size:65%;
+  opacity:0.04;
+  pointer-events:none;
+  z-index:0;
+}
 .wrap { max-width: 980px; margin:0 auto; padding:20px; position:relative; z-index:1; }
 
 /* =========================
@@ -76,6 +87,27 @@ body {
 /* =========================
    Menu complet
 ========================= */
+.full-menu h2,
+.full-menu h3{
+  position:relative;
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  color:var(--green-empire);
+  margin:32px 0 22px;
+  padding-bottom:16px;
+  letter-spacing:1px;
+}
+
+.full-menu h2::after,
+.full-menu h3::after{
+  content:"✿ ❖ ✿";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:0;
+  color:var(--gold);
+  font-size:0.9rem;
+}
 .full-menu { background: var(--card); padding: 18px 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-top:18px; }
 .full-menu ul { list-style:none; padding-left:0; margin-bottom:0; }
 .full-menu li {
@@ -167,14 +199,4 @@ body {
   .brand h1 { font-size:2rem; }
   .brand .tagline { font-size:1rem; }
   .modal-panel { padding:0; }
-}
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:url("images/tajmahal.png") center center no-repeat;
-  background-size:70%;
-  opacity:0.05; /* ultra discret */
-  pointer-events:none;
-  z-index:-1;
 }

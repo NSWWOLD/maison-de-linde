@@ -168,3 +168,13 @@ body {
   .brand .tagline { font-size:1rem; }
   .modal-panel { padding:0; }
 }
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("images/tajmahal.png") center center no-repeat;
+  background-size:70%;
+  opacity:0.05; /* ultra discret */
+  pointer-events:none;
+  z-index:-1;
+}

@@ -7,36 +7,33 @@
 :root{--gold:#d4af37;--velvet:#8b0505;--green:#004225;--bg:#fff5e6;--card:#fffaf3;--muted:#6b5a4a}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Noto Sans",sans-serif;background:var(--bg);color:#222}
-.wrap{max-width:1200px;margin:auto;padding:20px}
+.wrap{max-width:1400px;margin:auto;padding:20px}
 
 
 /* POPUP BANNIERE */
-.banner{
-position:fixed;top:20px;left:50%;transform:translateX(-50%);
-background:linear-gradient(180deg,var(--velvet),#5c0303);
-color:#fff;padding:14px 20px;border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-z-index:9999;display:flex;gap:15px;align-items:center
-}
-.banner button{background:#fff;color:var(--velvet);border:0;border-radius:8px;padding:6px 12px;font-weight:700;cursor:pointer}
+.banner{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,var(--velvet),#5c0303);color:#fff;padding:14px 20px;border-radius:16px;box-shadow:0 12px 35px rgba(0,0,0,.35);z-index:9999;display:flex;gap:15px;align-items:center;font-size:.95rem}
+.banner button{background:#fff;color:var(--velvet);border:0;border-radius:8px;padding:6px 14px;font-weight:700;cursor:pointer}
 .banner .close{background:none;color:#fff;font-size:22px}
 
 
-header{text-align:center;padding:80px 20px 40px}
-h1{font-family:"Playfair Display",serif;font-size:3rem;color:var(--green)}
-.subtitle{color:var(--velvet);margin-bottom:10px}
+header{text-align:center;padding:110px 20px 40px}
+h1{font-family:"Playfair Display",serif;font-size:3.2rem;color:var(--green);position:relative;display:inline-block;padding:0 40px}
+h1:before,h1:after{content:"❦";color:var(--gold);position:absolute;top:50%;transform:translateY(-50%);font-size:1.8rem}
+h1:before{left:0}h1:after{right:0}
+.subtitle{color:var(--velvet);margin-bottom:10px;font-weight:600}
 
 
-.menu{background:var(--card);border-radius:18px;padding:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.menu h2{color:var(--velvet);border-bottom:2px solid var(--gold);margin-bottom:10px}
-.item{display:flex;justify-content:space-between;padding:4px 0}
+.menu{background:var(--card);border-radius:20px;padding:35px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.menu h2{color:var(--velvet);border-bottom:2px solid var(--gold);padding-bottom:6px;margin-bottom:12px}
+.item{display:flex;justify-content:space-between;padding:5px 0;font-size:.95rem}
 .price{font-weight:700;color:var(--velvet)}
 
 
-footer{text-align:center;margin:40px 0;color:var(--muted)}
+footer{text-align:center;margin:50px 0;color:var(--muted);font-size:.95rem}
+footer .social a{margin:0 10px;color:var(--velvet);text-decoration:none;font-weight:700}
 
 
-@media(max-width:900px){.menu{grid-template-columns:1fr}}
+@media(max-width:1000px){.menu{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -58,6 +55,8 @@ footer{text-align:center;margin:40px 0;color:var(--muted)}
 
 <section class="wrap">
 <div class="menu">
+
+
 <div>
 <h2>Entrées</h2>
 <div class="item"><span>Entrée Mix (2 pers.)</span><span class="price">20 €</span></div>
@@ -65,47 +64,36 @@ footer{text-align:center;margin:40px 0;color:var(--muted)}
 <div class="item"><span>Shammi kebab</span><span class="price">11 €</span></div>
 <div class="item"><span>Onion bajia</span><span class="price">8 €</span></div>
 <div class="item"><span>Vegetable samossa</span><span class="price">9 €</span></div>
-<div class="item"><span>Salade verte</span><span class="price">8 €</span></div>
+<div class="item"><span>Salade verte indienne</span><span class="price">8 €</span></div>
 <div class="item"><span>Raita</span><span class="price">7 €</span></div>
 <div class="item"><span>Crevette pakora</span><span class="price">12 €</span></div>
 <div class="item"><span>Fromage pakora</span><span class="price">9 €</span></div>
 <div class="item"><span>Beigan pakora</span><span class="price">9 €</span></div>
+
+
+<h2>Grillades Tandoori</h2>
+<div class="item"><span>Assortiment tandoori (2 pers.)</span><span class="price">30 €</span></div>
+<div class="item"><span>Poulet tandoori</span><span class="price">12 €</span></div>
+<div class="item"><span>Poulet tikka</span><span class="price">12 €</span></div>
+<div class="item"><span>Agneau tikka</span><span class="price">16 €</span></div>
+<div class="item"><span>Seekh kebab</span><span class="price">17 €</span></div>
+<div class="item"><span>Poisson tikka</span><span class="price">17 €</span></div>
+<div class="item"><span>Gambas tandoori</span><span class="price">24 €</span></div>
 </div>
 
 
 <div>
-<h2>Pains</h2>
-<div class="item"><span>Roti</span><span class="price">4 €</span></div>
-<div class="item"><span>Nân</span><span class="price">3,50 €</span></div>
-<div class="item"><span>Nân fromage</span><span class="price">5 €</span></div>
-<div class="item"><span>Stuffed paraha</span><span class="price">6 €</span></div>
-<div class="item"><span>Keema nân</span><span class="price">6 €</span></div>
-<div class="item"><span>Nân à l’ail</span><span class="price">5 €</span></div>
-<div class="item"><span>Nân garlic fromage</span><span class="price">6 €</span></div>
-</div>
+<h2>Agneau</h2>
+<div class="item"><span>Agneau baigan</span><span class="price">19 €</span></div>
+<div class="item"><span>Agneau tikka masala</span><span class="price">19 €</span></div>
+<div class="item"><span>Agneau moghalai</span><span class="price">20 €</span></div>
+<div class="item"><span>Agneau curry</span><span class="price">19 €</span></div>
+<div class="item"><span>Agneau sagwala</span><span class="price">19 €</span></div>
+<div class="item"><span>Agneau Hyderabadi</span><span class="price">20 €</span></div>
+<div class="item"><span>Agneau madras</span><span class="price">19 €</span></div>
+<div class="item"><span>Agneau dal</span><span class="price">19 €</span></div>
+<div class="item"><span>Agneau shahi korma</span><span class="price">19 €</span></div>
+<div class="item"><span>Agneau seek masala</span><span class="price">20 €</span></div>
 
 
-<div>
-<h2>Desserts</h2>
-<div class="item"><span>Gâteau maison</span><span class="price">6 €</span></div>
-<div class="item"><span>Pistache kulfi</span><span class="price">8 €</span></div>
-<div class="item"><span>Gulab jamun</span><span class="price">6 €</span></div>
-<div class="item"><span>Glace Pendjab</span><span class="price">5 €</span></div>
-<div class="item"><span>Assiette maison</span><span class="price">12 €</span></div>
-<div class="item"><span>Salade de fruits</span><span class="price">6 €</span></div>
-<div class="item"><span>Sorbets</span><span class="price">5 €</span></div>
-</div>
-</div>
-</section>
-
-
-<footer>
-<p><strong>Maison de l’Inde</strong></p>
-<p>60 avenue du Général de Gaulle – 68300 Saint‑Louis</p>
-<p>📞 09 53 41 65 14 • 06 27 57 44 13</p>
-<p>Lundi au samedi : 11h30–14h30 / 17h30–23h00 • Fermé le dimanche</p>
-</footer>
-
-
-</body>
-</html>
+<h2>Poulet</h2>

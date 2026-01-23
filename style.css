@@ -112,7 +112,7 @@ body{
 }
 
 .site-header::before,
-.site-footer::before {
+.site-footer::before { ... }
   content: "";
   position: absolute;
   inset: 0;

@@ -1,217 +1,206 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MAISON DE L'INDE — Restaurant du nord de l'Inde</title>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison de l’Inde — Restaurant du Nord de l’Inde</title>
 
-  <style>
-  /* =========================
-     Variables globales
-  ========================= */
-  :root {
-    --gold: #d4af37;
-    --saffron: #c98b2f;
-    --maroon: #5a1a1a;
-    --velvet: #9b0606;
-    --accent: #f28c08;
-    --accent-dark: #7a3d00;
-    --bg: #fff5e6;
-    --card: #fffaf3;
-    --muted: #6b5a4a;
-    --green-empire: #004225;
-  }
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  /* =========================
-     Reset et base
-  ========================= */
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body {
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: var(--bg);
-    background-image: url("assets/kashmir-floral.svg");
-    background-repeat: repeat;
-    background-size: 300px;
-    background-attachment: fixed;
-    color: #222;
-  }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 20px; position: relative; z-index:1; }
+<style>
+/* =========================
+   VARIABLES LUXE
+========================= */
+:root{
+  --gold:#d4af37;
+  --velvet:#8b0505;
+  --green:#004225;
+  --bg:#fff5e6;
+  --card:#fffaf3;
+  --muted:#6b5a4a;
+}
 
-  /* =========================
-     Ribbon livraison
-  ========================= */
-  .delivery-ribbon {
-    position: fixed; top:0; left:0; right:0;
-    background: linear-gradient(180deg, var(--velvet), #7a0505);
-    color: #fff; z-index: 9999;
-    padding: 15px; display:flex; justify-content:center; align-items:center;
-    font-weight:700;
-  }
-  .delivery-ribbon .ribbon-content { display:flex; align-items:center; gap:10px; max-width:980px; width:100%; }
-  .delivery-ribbon .close-ribbon { margin-left:auto; background:none; color:#fff; border:none; font-size:22px; cursor:pointer; }
+/* RESET */
+*{box-sizing:border-box;margin:0;padding:0}
 
-  /* =========================
-     Header
-  ========================= */
-  .site-header {
-    position: relative;
-    text-align:center;
-    padding: 60px 20px 40px;
-    background-color: var(--card);
-  }
-  .site-header::before {
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:url("assets/kashmir-floral.svg");
-    background-repeat:repeat;
-    background-size:250px;
-    opacity:0.05;
-    pointer-events:none;
-    z-index:0;
-  }
-  .header-content { position:relative; z-index:1; }
-  .brand h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--green-empire);
-    margin-bottom:10px;
-  }
-  .brand .tagline {
-    font-family: 'Noto Sans', sans-serif;
-    font-size:1.2rem;
-    font-weight:600;
-    color: var(--velvet);
-  }
+/* BODY + FOND KASHMIR */
+body{
+  font-family:"Noto Sans",sans-serif;
+  background:
+    linear-gradient(rgba(255,245,230,.94),rgba(255,245,230,.94)),
+    url("assets/kashmir-floral.svg");
+  background-size:320px;
+  color:#222;
+}
 
-  /* =========================
-     Menu complet
-  ========================= */
-  .full-menu {
-    background: var(--card);
-    padding: 18px 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-top:18px;
-  }
-  .full-menu ul { list-style:none; padding-left:0; margin-bottom:0; }
-  .full-menu li {
-    display:flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom:1px dashed rgba(0,0,0,0.05);
-  }
-  .full-menu .dish { color: var(--green-empire); font-weight:700; }
-  .full-menu .price { color: var(--velvet); font-weight:700; }
+/* WRAP */
+.wrap{max-width:1000px;margin:auto;padding:20px}
 
-  /* =========================
-     Cards
-  ========================= */
-  .card { background: var(--card); border-radius:10px; padding:18px; margin-top:18px; box-shadow:0 8px 20px rgba(45,30,10,0.03); }
+/* RIBBON */
+.delivery-ribbon{
+  position:fixed;top:0;left:0;right:0;
+  background:linear-gradient(180deg,var(--velvet),#5c0303);
+  color:#fff;
+  z-index:9999;
+}
+.ribbon-content{
+  max-width:1000px;
+  margin:auto;
+  padding:12px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-weight:700;
+}
+.close-ribbon{
+  margin-left:auto;
+  background:none;border:0;
+  color:#fff;font-size:22px;
+  cursor:pointer;
+}
 
-  /* =========================
-     Footer
-  ========================= */
-  .site-footer { position:relative; margin-top:26px; padding:18px 0; text-align:center; color:var(--muted); font-size:0.9rem; }
-  .site-footer::before {
-    content:""; position:absolute; inset:0;
-    background-image:url("assets/kashmir-floral.svg");
-    background-repeat:repeat;
-    background-size:250px;
-    opacity:0.05; pointer-events:none; z-index:0;
-  }
+/* HEADER */
+.site-header{
+  margin-top:80px;
+  text-align:center;
+  padding:50px 20px;
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  animation:fadeUp .9s ease forwards;
+}
 
-  /* =========================
-     Buttons
-  ========================= */
-  .btn{ padding:10px 14px; border-radius:8px; background:var(--accent); color:#fff; border:0; cursor:pointer; font-weight:700; }
-  .btn.alt{ background:transparent; color:var(--accent-dark); border:1px solid rgba(160,75,4,0.08); }
+.subtitle{
+  color:var(--velvet);
+  font-family:"Playfair Display",serif;
+  letter-spacing:1.5px;
+  margin-bottom:10px;
+}
 
-  /* =========================
-     Responsive
-  ========================= */
-  @media(max-width:720px){
-    .delivery-ribbon { font-size:0.95rem; padding:6px; }
-    .modal-panel { padding:0; }
-    .brand h1 { font-size:2rem; }
-    .brand .tagline { font-size:1rem; }
-  }
-  </style>
+.site-title{
+  font-family:"Playfair Display",serif;
+  font-size:3.4rem;
+  letter-spacing:3px;
+  color:var(--green);
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  margin-top:30px;
+  padding:26px;
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.05);
+  animation:fadeUp 1.1s ease forwards;
+}
+
+/* MENU PREMIUM */
+.menu-list{margin-top:20px}
+.menu-item{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:12px;
+  align-items:center;
+  padding:8px 0;
+}
+
+.menu-item::after{
+  content:"";
+  grid-column:2;
+  height:1px;
+  background:repeating-linear-gradient(
+    to right,
+    rgba(0,0,0,.2),
+    rgba(0,0,0,.2) 3px,
+    transparent 3px,
+    transparent 7px
+  );
+}
+
+.dish{
+  font-weight:700;
+  color:var(--green);
+}
+
+.price{
+  font-weight:800;
+  color:var(--velvet);
+}
+
+/* FOOTER */
+.site-footer{
+  text-align:center;
+  margin:40px 0 20px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+
+/* RESPONSIVE */
+@media(max-width:720px){
+  .site-title{font-size:2.5rem}
+  .menu-item{grid-template-columns:1fr auto}
+  .menu-item::after{display:none}
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Ribbon livraison -->
-  <div id="deliveryRibbon" class="delivery-ribbon" role="region" aria-label="Annonce livraison">
-    <div class="ribbon-content">
-      <span class="gift">🎁</span>
-      <strong>Livraison à domicile :</strong>
-      <span id="ribbonText">
-        Livraison disponible dans un rayon de 15 km autour de notre restaurant. Appelez-nous au <a href="tel:+33953416514">09 53 41 65 14</a>.
-      </span>
-      <button id="closeRibbon" class="close-ribbon" aria-label="Fermer la bannière">&times;</button>
-    </div>
+<!-- RIBBON -->
+<div class="delivery-ribbon" id="deliveryRibbon">
+  <div class="ribbon-content">
+    🎁 Livraison à domicile – <a href="tel:+33953416514" style="color:#fff">09 53 41 65 14</a>
+    <button class="close-ribbon" id="closeRibbon">&times;</button>
   </div>
+</div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="wrap header-content">
-      <div class="brand">
-        <h1>Maison de l'Inde</h1>
-        <p class="tagline">Restaurant indien — Spécialités du Nord de l'Inde</p>
-      </div>
-    </div>
-  </header>
+<!-- HEADER -->
+<header class="site-header wrap">
+  <div class="subtitle">Restaurant indien — Spécialités du Nord de l’Inde</div>
+  <h1 class="site-title">MAISON DE L’INDE</h1>
+</header>
 
-  <!-- Main -->
-  <main class="wrap">
-    <section class="intro card">
-      <h2>Bienvenue</h2>
-      <p>Maison de l'Inde vous propose une cuisine indienne authentique, sur place ou à emporter. Plats faits maison, recettes traditionnelles et service chaleureux. Pensez à réserver pour vos fêtes : mariages, baptêmes, anniversaires.</p>
-      <div class="actions">
-        <button class="btn alt" id="showMenu">Voir le menu</button>
-      </div>
-    </section>
+<!-- INTRO -->
+<section class="card wrap">
+  <p>
+    Cuisine indienne authentique, recettes traditionnelles,
+    produits sélectionnés et accueil chaleureux.
+  </p>
+</section>
 
-    <!-- Menu complet -->
-    <section class="menu card" id="menuSection" aria-labelledby="menuTitle">
-      <h2 id="menuTitle">Le menu complet</h2>
-      <div class="full-menu">
-        <ul>
-          <li><span class="dish">Entrée Mix (viande & légumes) pour 2 pers.</span> <span class="price">20,00€</span></li>
-          <li><span class="dish">Assortiments de beignets (pour 2 pers.)</span> <span class="price">16,00€</span></li>
-          <li><span class="dish">Shammi kebab (croquettes de viande hachée parfumées à la cardamome)</span> <span class="price">11,00€</span></li>
-          <li><span class="dish">Onion bajia (beignets d'oignons)</span> <span class="price">8,00€</span></li>
-          <li><span class="dish">Vegetable samossa (chaussons de légumes)</span> <span class="price">9,00€</span></li>
-          <li><span class="dish">Salade verte à la façon indienne</span> <span class="price">8,00€</span></li>
-          <li><span class="dish">Raita (yaourt au concombre parfumé au cumin)</span> <span class="price">7,00€</span></li>
-          <li><span class="dish">Crevette Pakora (crevettes avec farine de pois chiches)</span> <span class="price">12,00€</span></li>
-          <li><span class="dish">Fromage Pakora (fromage avec farine de pois)</span> <span class="price">9,00€</span></li>
-          <li><span class="dish">Beigan Pakora</span> <span class="price">9,00€</span></li>
-        </ul>
-      </div>
-      <p class="note">Le menu complet est également disponible au format PDF téléchargeable ci‑dessous.</p>
-    </section>
-  </main>
+<!-- MENU -->
+<section class="card wrap">
+  <h2>Notre menu</h2>
+  <div class="menu-list">
+    <div class="menu-item"><span class="dish">Entrée Mix (2 pers.)</span><span class="price">20 €</span></div>
+    <div class="menu-item"><span class="dish">Assortiment de beignets</span><span class="price">16 €</span></div>
+    <div class="menu-item"><span class="dish">Shammi Kebab</span><span class="price">11 €</span></div>
+    <div class="menu-item"><span class="dish">Onion Bajia</span><span class="price">8 €</span></div>
+    <div class="menu-item"><span class="dish">Vegetable Samosa</span><span class="price">9 €</span></div>
+    <div class="menu-item"><span class="dish">Raita</span><span class="price">7 €</span></div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <big>© 2026 Maison de l'Inde — 60, avenue du Général de Gaulle, 68300 ST LOUIS</big>
-    </div>
-  </footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+  © 2026 Maison de l’Inde — 60 avenue du Général de Gaulle, 68300 Saint-Louis
+</footer>
 
-  <script>
-  // JS pour fermer la bannière
-  const ribbon = document.getElementById('deliveryRibbon');
-  document.getElementById('closeRibbon').addEventListener('click', () => {
-    ribbon.style.display = 'none';
-  });
-  </script>
+<!-- JS -->
+<script>
+document.getElementById("closeRibbon").onclick = () => {
+  document.getElementById("deliveryRibbon").style.display = "none";
+};
+</script>
 
 </body>
 </html>

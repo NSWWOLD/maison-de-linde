@@ -18,7 +18,7 @@
    Reset et base
 ========================= */
 * { box-sizing: border-box; margin:0; padding:0; }
-body {
+body {}
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: var(--bg);
   background-image: url("assets/kashmir-floral.svg");

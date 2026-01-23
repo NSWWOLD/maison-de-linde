@@ -112,18 +112,14 @@ body{
 }
 
 .site-header::before,
-.site-footer::before { ... }
+.site-footer::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url("assets/taj-mahal-floral.svg");
-  background-repeat: repeat;
-  background-size: 200px;
-  opacity: 0.8;
+  background-repeat: repeat;   
+  background-size: 200px;      
+  opacity: 0.8;                
   pointer-events: none;
-  background-color: red;
-}
-body {
-  background-color: pink !important;
-}
+  background-color: red;       
 }

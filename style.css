@@ -2,240 +2,6 @@
    Variables globales
 ========================= */
 :root {
-  --gold: #d4af37;         /* doré */
-  --saffron: #c98b2f;      /* safran */
-  --maroon: #5a1a1a;       /* bordeaux profond */
-  --velvet: #9b0606;       /* rouge profond accent */
-  --accent: #f28c08;       /* orange lumineux */
-  --accent-dark: #7a3d00;  /* orange foncé */
-  --bg: #fff5e6;           /* fond crème chaud */
-  --card: #fffaf3;         /* fond card chaud */
-  --muted: #6b5a4a;        /* texte secondaire */
-  --green-empire: #004225; /* vert empire */
-}
-
-/* =========================
-   Reset et base
-========================= */
-* { box-sizing: border-box; margin:0; padding:0; }
-
-body {
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg);
-  color: #222;
-}
-
-.wrap {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* =========================
-   Ribbon livraison
-========================= */
-.delivery-ribbon {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  background: linear-gradient(180deg, var(--velvet) 0%, #7a0505 100%);
-  color: #fff;
-  z-index: 9999;
-  padding: 15px 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-}
-
-.delivery-ribbon .ribbon-content {
-  max-width: 980px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 4px 10px;
-}
-
-.delivery-ribbon .gift { font-size: 22px; margin-right: 8px; }
-.delivery-ribbon .ribbon-content strong { margin-right: 8px; }
-.close-ribbon {
-  margin-left: auto;
-  background: transparent;
-  color: #fff;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* =========================
-   Modal livraison
-========================= */
-.delivery-modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.6);
-  z-index: 10000;
-  padding: 20px;
-}
-
-.delivery-modal[aria-hidden="false"] { display: flex; }
-
-.modal-panel {
-  background: linear-gradient(180deg,#fff8f6,#fff0ee);
-  border-radius: 12px;
-  max-width: 760px;
-  width: 100%;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-  border: 6px solid rgba(139,18,18,0.12);
-  overflow: hidden;
-}
-
-.modal-header {
-  background: linear-gradient(90deg,var(--velvet),#8b0505);
-  color: #fff;
-  padding: 18px;
-}
-
-.modal-header h2 { margin:0; font-size:1.4rem; }
-.modal-body { padding:18px; color: #222; font-size:1rem; }
-.modal-actions { padding: 12px 18px 18px; display:flex; gap:10px; justify-content:flex-end; }
-
-/* =========================
-   Buttons
-========================= */
-.btn {
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
-  border: 0;
-  cursor: pointer;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn.alt {
-  background: transparent;
-  color: var(--accent-dark);
-  border: 1px solid rgba(160,75,4,0.08);
-}
-
-/* =========================
-   Cards
-========================= */
-.card {
-  background: var(--card);
-  border-radius: 10px;
-  padding: 18px;
-  margin-top: 18px;
-  box-shadow: 0 8px 20px rgba(45,30,10,0.03);
-  border: 1px solid rgba(160,75,4,0.04);
-}
-
-.actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
-
-/* =========================
-   Menu complet
-========================= */
-.full-menu {
-  background: var(--card);
-  padding: 18px 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.full-menu h3 {
-  color: var(--maroon);
-  border-bottom: 2px solid var(--gold);
-  padding-bottom: 4px;
-  margin-top: 20px;
-}
-
-.full-menu ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 15px;
-}
-
-.full-menu li {
-  color: var(--green-empire);
-  line-height: 1.5;
-  padding: 2px 0;
-}
-
-.full-menu li::before {
-  content: "• ";
-  color: var(--gold);
-}
-
-/* =========================
-   PDF et notes
-========================= */
-.note { margin-top: 12px; color: var(--muted); font-size: 0.95rem; }
-
-.pdf-container {
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #efe3d0;
-  overflow: hidden;
-  margin-top: 12px;
-}
-
-.pdf-container iframe { width: 100%; height: 520px; border: 0; }
-
-/* =========================
-   Header / Footer avec filigrane Taj Mahal
-========================= */
-.site-header,
-.site-footer {
-  position: relative;
-  background-color: var(--card);
-}
-
-.site-header::before,
-.site-footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("assets/taj-mahal-floral.svg");
-  background-repeat: repeat;
-  background-size: 200px;
-  opacity: 0.08;      /* filigrane très discret */
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* =========================
-   Footer
-========================= */
-.site-footer {
-  margin-top: 26px;
-  padding: 18px 0;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* =========================
-   Responsive
-========================= */
-@media(max-width:720px){
-  .delivery-ribbon .ribbon-content { font-size:0.95rem; padding:6px; }
-  .modal-panel { padding:0; }
-}
-
-/* =========================
-   Focus
-========================= */
-:focus {
-  outline: 3px solid rgba(242,140,8,0.3);
-  outline-offset: 2px;
-}
-:root {
   --gold: #d4af37;
   --saffron: #c98b2f;
   --maroon: #5a1a1a;
@@ -248,59 +14,169 @@ body {
   --green-empire: #004225;
 }
 
-/* Reset */
-* { box-sizing:border-box; margin:0; padding:0; }
-body { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: #222; }
-.wrap { max-width: 980px; margin: 0 auto; padding: 20px; }
+/* =========================
+   Reset et base
+========================= */
+* { box-sizing: border-box; margin:0; padding:0; }
 
-/* Ribbon livraison */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  background-image: url("assets/kashmir-floral.svg"); /* fond floral discret */
+  background-repeat: repeat;
+  background-size: 300px;
+  background-attachment: fixed;
+  color: #222;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index:1;
+}
+
+/* =========================
+   Ribbon livraison
+========================= */
 .delivery-ribbon {
-  position: fixed; top:0; left:0; right:0;
+  position: fixed;
+  top:0; left:0; right:0;
   background: linear-gradient(180deg, var(--velvet), #7a0505);
   color: #fff; z-index: 9999;
   padding: 15px; display:flex; justify-content:center; align-items:center;
   font-weight:700;
 }
+.delivery-ribbon .ribbon-content { display:flex; align-items:center; gap:10px; max-width:980px; width:100%; }
 .delivery-ribbon .close-ribbon { margin-left:auto; background:none; color:#fff; border:none; font-size:22px; cursor:pointer; }
 
-/* Header */
-.site-header { position: relative; background-color: var(--card); text-align:center; padding:20px 0; }
+/* =========================
+   Header
+========================= */
+.site-header {
+  position: relative;
+  text-align:center;
+  padding: 60px 20px 40px;
+  background-color: var(--card);
+}
 .site-header::before {
-  content: "";
-  position: absolute; inset:0;
-  background-image:url("assets/taj-mahal-floral.svg");
-  background-repeat: repeat;
-  background-size: 200px;
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("assets/kashmir-floral.svg"); /* motif discret */
+  background-repeat:repeat;
+  background-size:250px;
   opacity:0.05;
   pointer-events:none;
   z-index:0;
 }
 .header-content { position:relative; z-index:1; }
-.brand img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; }
+.brand h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--green-empire);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* léger effet brillant */
+  margin-bottom:10px;
+}
+.brand .tagline {
+  font-family: 'Noto Sans', sans-serif;
+  font-size:1.2rem;
+  font-weight:600;
+  color: var(--velvet);
+}
 
-/* Menu complet */
-.full-menu { background: var(--card); padding: 18px 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.full-menu ul { list-style:none; padding-left:0; }
-.full-menu li { display:flex; justify-content:space-between; border-bottom:1px dashed rgba(0,0,0,0.05); padding:4px 0; line-height:1.5; }
-.dish { color: var(--green-empire); font-weight:700; }
-.price { color: var(--velvet); font-weight:700; }
+/* =========================
+   Menu complet
+========================= */
+.full-menu {
+  background: var(--card);
+  padding: 18px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-top:18px;
+}
+.full-menu ul { list-style:none; padding-left:0; margin-bottom:0; }
+.full-menu li {
+  display:flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom:1px dashed rgba(0,0,0,0.05);
+}
+.full-menu .dish { color: var(--green-empire); font-weight:700; }
+.full-menu .price { color: var(--velvet); font-weight:700; }
 
-/* Cards */
-.card { background: var(--card); border-radius:10px; padding:18px; margin-top:18px; box-shadow:0 8px 20px rgba(45,30,10,0.03); }
+/* =========================
+   Cards
+========================= */
+.card { 
+  background: var(--card); 
+  border-radius:10px; 
+  padding:18px; 
+  margin-top:18px; 
+  box-shadow:0 8px 20px rgba(45,30,10,0.03); 
+  border:1px solid rgba(160,75,4,0.04);
+}
+.actions { margin-top: 12px; display:flex; gap:10px; flex-wrap:wrap; }
 
-/* Footer */
-.site-footer { position:relative; margin-top:26px; padding:18px 0; text-align:center; color:var(--muted); font-size:0.9rem; }
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  position:relative; 
+  margin-top:26px; 
+  padding:18px 0; 
+  text-align:center; 
+  color:var(--muted); 
+  font-size:0.9rem;
+}
 .site-footer::before {
   content:""; position:absolute; inset:0;
-  background-image:url("assets/taj-mahal-floral.svg");
-  background-repeat:repeat; background-size:200px;
+  background-image:url("assets/kashmir-floral.svg");
+  background-repeat:repeat;
+  background-size:250px;
   opacity:0.05; pointer-events:none; z-index:0;
 }
 
-/* Boutons */
-.btn{ padding:10px 14px; border-radius:8px; background:var(--accent); color:#fff; border:0; cursor:pointer; font-weight:700; }
-.btn.alt{ background:transparent; color:var(--accent-dark); border:1px solid rgba(160,75,4,0.08); }
+/* =========================
+   Buttons
+========================= */
+.btn{
+  padding:10px 14px; 
+  border-radius:8px; 
+  background:var(--accent); 
+  color:#fff; 
+  border:0; 
+  cursor:pointer; 
+  font-weight:700;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn.alt{ 
+  background:transparent; 
+  color:var(--accent-dark); 
+  border:1px solid rgba(160,75,4,0.08);
+}
 
-/* Responsive */
+/* =========================
+   Notes et PDF
+========================= */
+.note { margin-top:12px; color:var(--muted); font-size:0.95rem; }
+.pdf-container {
+  background:#fff;
+  border-radius:8px;
+  border:1px solid #efe3d0;
+  overflow:hidden;
+  margin-top:12px;
+}
+.pdf-container iframe { width:100%; height:520px; border:0; }
+
+/* =========================
+   Responsive
+========================= */
 @media(max-width:720px){
   .delivery-ribbon { font-size:0.95rem; padding:6px; }
+  .brand h1 { font-size:2rem; }
+  .brand .tagline { font-size:1rem; }
+}

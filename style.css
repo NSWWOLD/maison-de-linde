@@ -235,3 +235,72 @@ body {
   outline: 3px solid rgba(242,140,8,0.3);
   outline-offset: 2px;
 }
+:root {
+  --gold: #d4af37;
+  --saffron: #c98b2f;
+  --maroon: #5a1a1a;
+  --velvet: #9b0606;
+  --accent: #f28c08;
+  --accent-dark: #7a3d00;
+  --bg: #fff5e6;
+  --card: #fffaf3;
+  --muted: #6b5a4a;
+  --green-empire: #004225;
+}
+
+/* Reset */
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: #222; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 20px; }
+
+/* Ribbon livraison */
+.delivery-ribbon {
+  position: fixed; top:0; left:0; right:0;
+  background: linear-gradient(180deg, var(--velvet), #7a0505);
+  color: #fff; z-index: 9999;
+  padding: 15px; display:flex; justify-content:center; align-items:center;
+  font-weight:700;
+}
+.delivery-ribbon .close-ribbon { margin-left:auto; background:none; color:#fff; border:none; font-size:22px; cursor:pointer; }
+
+/* Header */
+.site-header { position: relative; background-color: var(--card); text-align:center; padding:20px 0; }
+.site-header::before {
+  content: "";
+  position: absolute; inset:0;
+  background-image:url("assets/taj-mahal-floral.svg");
+  background-repeat: repeat;
+  background-size: 200px;
+  opacity:0.05;
+  pointer-events:none;
+  z-index:0;
+}
+.header-content { position:relative; z-index:1; }
+.brand img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; }
+
+/* Menu complet */
+.full-menu { background: var(--card); padding: 18px 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.full-menu ul { list-style:none; padding-left:0; }
+.full-menu li { display:flex; justify-content:space-between; border-bottom:1px dashed rgba(0,0,0,0.05); padding:4px 0; line-height:1.5; }
+.dish { color: var(--green-empire); font-weight:700; }
+.price { color: var(--velvet); font-weight:700; }
+
+/* Cards */
+.card { background: var(--card); border-radius:10px; padding:18px; margin-top:18px; box-shadow:0 8px 20px rgba(45,30,10,0.03); }
+
+/* Footer */
+.site-footer { position:relative; margin-top:26px; padding:18px 0; text-align:center; color:var(--muted); font-size:0.9rem; }
+.site-footer::before {
+  content:""; position:absolute; inset:0;
+  background-image:url("assets/taj-mahal-floral.svg");
+  background-repeat:repeat; background-size:200px;
+  opacity:0.05; pointer-events:none; z-index:0;
+}
+
+/* Boutons */
+.btn{ padding:10px 14px; border-radius:8px; background:var(--accent); color:#fff; border:0; cursor:pointer; font-weight:700; }
+.btn.alt{ background:transparent; color:var(--accent-dark); border:1px solid rgba(160,75,4,0.08); }
+
+/* Responsive */
+@media(max-width:720px){
+  .delivery-ribbon { font-size:0.95rem; padding:6px; }

@@ -3,221 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MAISON DE L'INDE — Restaurant du nord de l'inde</title>
+  <title>MAISON DE L'INDE — Restaurant du nord de l'Inde</title>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+  :root {
+    --gold: #d4af37;
+    --saffron: #c98b2f;
+    --maroon: #5a1a1a;
+    --velvet: #9b0606;
+    --accent: #f28c08;
+    --accent-dark: #7a3d00;
+    --bg: #fff5e6;
+    --card: #fffaf3;
+    --muted: #6b5a4a;
+    --green-empire: #004225;
+  }
+
+  /* Reset */
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: #222; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 20px; }
+
+  /* Ribbon livraison */
+  .delivery-ribbon {
+    position: fixed; top:0; left:0; right:0;
+    background: linear-gradient(180deg, var(--velvet), #7a0505);
+    color: #fff; z-index: 9999;
+    padding: 15px; display:flex; justify-content:center; align-items:center;
+    font-weight:700;
+  }
+  .delivery-ribbon .ribbon-content { display:flex; align-items:center; gap:10px; max-width:980px; width:100%; }
+  .delivery-ribbon .close-ribbon { margin-left:auto; background:none; color:#fff; border:none; font-size:22px; cursor:pointer; }
+
+  /* Header */
+  .site-header { position: relative; background-color: var(--card); text-align:center; padding:20px 0; }
+  .site-header::before {
+    content: "";
+    position: absolute; inset:0;
+    background-image:url("assets/taj-mahal-floral.svg");
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity:0.05;
+    pointer-events:none;
+    z-index:0;
+  }
+  .header-content { position:relative; z-index:1; }
+  .brand img.logo { width:120px; height:auto; display:block; margin:0 auto 10px; }
+
+  /* Menu complet */
+  .full-menu { background: var(--card); padding: 18px 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+  .full-menu ul { list-style:none; padding-left:0; }
+  .full-menu li { display:flex; justify-content:space-between; border-bottom:1px dashed rgba(0,0,0,0.05); padding:4px 0; line-height:1.5; }
+  .dish { color: var(--green-empire); font-weight:700; }
+  .price { color: var(--velvet); font-weight:700; }
+
+  /* Cards */
+  .card { background: var(--card); border-radius:10px; padding:18px; margin-top:18px; box-shadow:0 8px 20px rgba(45,30,10,0.03); }
+
+  /* Footer */
+  .site-footer { position:relative; margin-top:26px; padding:18px 0; text-align:center; color:var(--muted); font-size:0.9rem; }
+  .site-footer::before {
+    content:""; position:absolute; inset:0;
+    background-image:url("assets/taj-mahal-floral.svg");
+    background-repeat:repeat; background-size:200px;
+    opacity:0.05; pointer-events:none; z-index:0;
+  }
+
+  /* Boutons */
+  .btn{ padding:10px 14px; border-radius:8px; background:var(--accent); color:#fff; border:0; cursor:pointer; font-weight:700; }
+  .btn.alt{ background:transparent; color:var(--accent-dark); border:1px solid rgba(160,75,4,0.08); }
+
+  /* Responsive */
+  @media(max-width:720px){
+    .delivery-ribbon { font-size:0.95rem; padding:6px; }
+  }
+
+  </style>
 </head>
 <body>
-  <!-- Ribbon (fixe en haut) -->
+
+  <!-- Ribbon livraison -->
   <div id="deliveryRibbon" class="delivery-ribbon" role="region" aria-label="Annonce livraison">
     <div class="ribbon-content">
       <span class="gift">🎁</span>
       <strong>Livraison à domicile :</strong>
-      <span id="ribbonText">Livraison disponible dans un rayon de 15 km autour de notre restaurant. Appelez-nous au <a href="tel:+33953416514">09 53 41 65 14</a>.</span>
+      <span id="ribbonText">
+        Livraison disponible dans un rayon de 15 km autour de notre restaurant. Appelez-nous au <a href="tel:+33953416514">09 53 41 65 14</a>.
+      </span>
       <button id="closeRibbon" class="close-ribbon" aria-label="Fermer la bannière">&times;</button>
     </div>
   </div>
 
-  <!-- Fullscreen popup (overlay) -->
-  <div id="deliveryModal" class="delivery-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Annonce livraison">
-    <div class="modal-panel" role="document" tabindex="-1">
-      <div class="modal-header">
-        <h2>🎁 Livraison à domicile</h2>
-      </div>
-      <div class="modal-body">
-        <p id="modalText">
-          Livraison disponible dans un rayon de 15 km autour de notre restaurant.
-          Horaires de livraison : du lundi au jeudi pendant nos horaires d'ouverture, ainsi que le vendredi matin et le samedi matin uniquement.
-          Appelez-nous pour commander au <a href="tel:+33953416514">09 53 41 65 14</a>.
-        </p>
-      </div>
-      <div class="modal-actions">
-        <button id="closeModal" class="btn">D'accord</button>
-        <button id="closeModalThisVisit" class="btn alt">Fermer pour cette visite</button>
-      </div>
-    </div>
-  </div>
-
+  <!-- Header -->
   <header class="site-header">
-    <div class="wrap">
+    <div class="wrap header-content">
       <div class="brand">
+        <img src="assets/taj-mahal-floral.svg" alt="Maison de l'Inde - Taj Mahal" class="logo" />
         <h1>Maison de l'Inde</h1>
         <p class="tagline">Restaurant indien — Spécialités du Nord de l'Inde</p>
       </div>
     </div>
   </header>
 
+  <!-- Main -->
   <main class="wrap">
     <section class="intro card">
       <h2>Bienvenue</h2>
       <p>Maison de l'Inde vous propose une cuisine indienne authentique, sur place ou à emporter. Plats faits maison, recettes traditionnelles et service chaleureux. Pensez à réserver pour vos fêtes : mariages, baptêmes, anniversaires.</p>
-
       <div class="actions">
         <button class="btn alt" id="showMenu">Voir le menu</button>
       </div>
     </section>
 
+    <!-- Menu complet -->
     <section class="menu card" id="menuSection" aria-labelledby="menuTitle">
       <h2 id="menuTitle">Le menu complet</h2>
-
-<div class="full-menu">
-  <h3>Entrées</h3>
-  <ul>
-    <li>Entrée Mix (viande & légumes) pour 2 pers. — 20,00€</li>
-    <li>Assortiments de beignets (pour 2 pers.) — 16,00€</li>
-    <li>Shammi kebab (croquettes de viande hachée parfumées à la cardamome) — 11,00€</li>
-    <li>Onion bajia (beignets d'oignons) — 8,00€</li>
-    <li>Vegetable samossa (chaussons de légumes) — 9,00€</li>
-    <li>Salade verte à la façon indienne — 8,00€</li>
-    <li>Raita (yaourt au concombre parfumé au cumin) — 7,00€</li>
-    <li>Crevette Pakora (crevettes avec farine de pois chiches) — 12,00€</li>
-    <li>Fromage Pakora (fromage avec farine de pois) — 9,00€</li>
-    <li>Beigan Pakora — 9,00€</li>
-  </ul>
-
-  <h3>Entrées "Grillades Indiens"</h3>
-  <ul>
-    <li>Assortiment de tandoris (2 pers.) — Gambas, brochettes de poulets, agneau et poisson — 30,00€</li>
-    <li>Poulet tandoori — 12,00€</li>
-    <li>Poulet tikka — 12,00€</li>
-    <li>Agneau tikka — 16,00€</li>
-    <li>Seekh kebab — 17,00€</li>
-    <li>Poisson tikka — 17,00€</li>
-    <li>Gambas tandoori — 24,00€</li>
-  </ul>
-
-  <h3>Pains</h3>
-  <ul>
-    <li>Roti — 4,00€</li>
-    <li>Nân — 3,50€</li>
-    <li>Nân fromage — 5,00€</li>
-    <li>Stuffed paraha — 6,00€</li>
-    <li>Keema nân — 6,00€</li>
-    <li>Nân à l'ail — 5,00€</li>
-    <li>Nân garlic fromage — 6,00€</li>
-  </ul>
-
-  <h3>Agneau</h3>
-  <ul>
-    <li>Agneau baigan — 19,00€</li>
-    <li>Agneau tikka masala — 19,00€</li>
-    <li>Agneau moghalai — 20,00€</li>
-    <li>Agneau curry — 19,00€</li>
-    <li>Agneau sagwala — 19,00€</li>
-    <li>Agneau Hyderabadi — 20,00€</li>
-    <li>Agneau madras — 19,00€</li>
-    <li>Agneau dal — 19,00€</li>
-    <li>Agneau shahi korma — 19,00€</li>
-    <li>Agneau seek masala — 20,00€</li>
-  </ul>
-
-  <h3>Poulet</h3>
-  <ul>
-    <li>Poulet tikka masala — 18,00€</li>
-    <li>Poulet moghalai — 17,00€</li>
-    <li>Butter chicken — 18,00€</li>
-    <li>Poulet korma — 17,00€</li>
-    <li>Poulet curry — 17,00€</li>
-    <li>Poulet madras — 17,00€</li>
-    <li>Poulet palak — 17,00€</li>
-    <li>Poulet jalfrezi — 17,00€</li>
-    <li>Poulet Hyderabadi — 18,00€</li>
-    <li>Poulet vindaloo — 17,00€</li>
-    <li>Poulet dal — 17,00€</li>
-  </ul>
-
-  <h3>Crevettes</h3>
-  <ul>
-    <li>Crevettes curry — 19,00€</li>
-    <li>Crevettes madras — 19,00€</li>
-    <li>Crevettes jalfrezi — 19,00€</li>
-    <li>Crevettes Hyderabadi — 20,00€</li>
-    <li>Crevettes sagwala — 19,00€</li>
-    <li>Crevettes Korma — 19,00€</li>
-    <li>Gambas masala — 26,00€</li>
-  </ul>
-
-  <h3>Poisson</h3>
-  <ul>
-    <li>Poisson Masala — 19,00€</li>
-    <li>Poisson Goa Curry — 19,00€</li>
-    <li>Poisson Madras — 19,00€</li>
-    <li>Poisson Hyderabadi — 20,00€</li>
-    <li>Noix de Saint Jacques masala — 25,00€</li>
-  </ul>
-
-  <h3>Biryanis</h3>
-  <ul>
-    <li>Agneau biryani — 22,00€</li>
-    <li>Poulet biryani — 19,00€</li>
-    <li>Vegetable biryani — 17,00€</li>
-    <li>Crevettes biryani — 21,00€</li>
-    <li>Biryani mixte tajmahal — 25,00€</li>
-  </ul>
-
-  <h3>Légumes</h3>
-  <ul>
-    <li>Aloo gobhi — 16,00€</li>
-    <li>Aloo panir — 14,00€</li>
-    <li>Matar panir — 14,00€</li>
-    <li>Sag aloo — 15,00€</li>
-    <li>Baigan bharta — 15,00€</li>
-    <li>Légumes korma — 15,00€</li>
-    <li>Mixte dal — 15,00€</li>
-    <li>Palak panir — 16,00€</li>
-    <li>Dal palak — 15,00€</li>
-    <li>Butter Paneer — 16,00€</li>
-  </ul>
-
-  <h3>Riz</h3>
-  <ul>
-    <li>Kashmiri pulao — 7,00€</li>
-    <li>Safran — 6,00€</li>
-    <li>Riz nature — 5,00€</li>
-  </ul>
-
-  <h3>Desserts</h3>
-  <ul>
-    <li>Gâteau maison — 6,00€</li>
-    <li>Pistache kulfi — 8,00€</li>
-    <li>Gulab jamun — 6,00€</li>
-    <li>Glace pendjab — 5,00€</li>
-    <li>Assiette maison — 12,00€</li>
-    <li>Salade de fruits fraîche — 6,00€</li>
-    <li>Sorbets — 5,00€</li>
-  </ul>
-</div>
+      <div class="full-menu">
+        <ul>
+          <li><span class="dish">Entrée Mix (viande & légumes) pour 2 pers.</span> <span class="price">20,00€</span></li>
+          <li><span class="dish">Assortiments de beignets (pour 2 pers.)</span> <span class="price">16,00€</span></li>
+          <li><span class="dish">Shammi kebab (croquettes de viande hachée parfumées à la cardamome)</span> <span class="price">11,00€</span></li>
+          <li><span class="dish">Onion bajia (beignets d'oignons)</span> <span class="price">8,00€</span></li>
+          <li><span class="dish">Vegetable samossa (chaussons de légumes)</span> <span class="price">9,00€</span></li>
+          <li><span class="dish">Salade verte à la façon indienne</span> <span class="price">8,00€</span></li>
+          <li><span class="dish">Raita (yaourt au concombre parfumé au cumin)</span> <span class="price">7,00€</span></li>
+          <li><span class="dish">Crevette Pakora (crevettes avec farine de pois chiches)</span> <span class="price">12,00€</span></li>
+          <li><span class="dish">Fromage Pakora (fromage avec farine de pois)</span> <span class="price">9,00€</span></li>
+          <li><span class="dish">Beigan Pakora</span> <span class="price">9,00€</span></li>
+        </ul>
       </div>
-
       <p class="note">Le menu complet est également disponible au format PDF téléchargeable ci‑dessous.</p>
-    </section>
-
-    <section class="info card">
-      <h2>Infos pratiques</h2>
-      <p><strong>Adresse :</strong> 60, avenue du Général de Gaulle — 68300 ST LOUIS</p>
-      <p><strong>Téléphone :</strong> <a href="tel:+33953416514">09 53 41 65 14</a> / <a href="tel:+33627574413">06 27 57 44 13</a></p>
-      <p><strong>Horaires :</strong> du lundi au samedi : 11h30–14h30 et 17h30–23h00 — Fermé le dimanche</p>
-      <p><strong>Suivez-nous :</strong> Instagram <code>@maison_de_linde</code></p>
-      <p><strong>Sur place ou à emporter</strong></p>
-    </section>
-
-    <section class="embed-pdf card" id="pdfEmbed">
-      <h2>Menu (aperçu)</h2>
-      <div class="pdf-container" id="pdfContainer">
-        <iframe src="menu.pdf" title="Menu PDF" frameborder="0" id="pdfFrame"></iframe>
-      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="wrap">
       <big>© 2026 Maison de l'Inde — 60, avenue du Général de Gaulle, 68300 ST LOUIS</big>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+  // JS pour fermer la bannière
+  const ribbon = document.getElementById('deliveryRibbon');
+  document.getElementById('closeRibbon').addEventListener('click', () => {
+    ribbon.style.display = 'none';
+  });
+  </script>
+
 </body>
 </html>

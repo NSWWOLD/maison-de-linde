@@ -18,8 +18,7 @@
    Reset et base
 ========================= */
 * { box-sizing: border-box; margin:0; padding:0; }
-
-body{
+body {
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: var(--bg);
   background-image: url("assets/kashmir-floral.svg");
@@ -29,7 +28,16 @@ body{
   color: #222;
 }
 /* ⬇️ AJOUTE JUSTE APRÈS */
-
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("assets/tajmahal.svg") center center no-repeat;
+  background-size:65%;
+  opacity:0.04;
+  pointer-events:none;
+  z-index:0;
+}
 .wrap { max-width: 980px; margin:0 auto; padding:20px; position:relative; z-index:1; }
 
 /* =========================
@@ -191,56 +199,4 @@ body{
   .brand h1 { font-size:2rem; }
   .brand .tagline { font-size:1rem; }
   .modal-panel { padding:0; }
-}
-/* ===== HERO TAJ MAHAL ===== */
-.hero {
-  min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("images/tajmahal.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.cta {
-  background: #d4af37;
-  padding: 0.8rem 1.6rem;
-  border-radius: 30px;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* ===== PHOTO GALERIE ===== */
-.gallery-section {
-  padding: 4rem 2rem;
-  background: #111;
-}
-
-.gallery-container {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.gallery-image img {
-  width: 100%;
-  border-radius: 15px;
 }

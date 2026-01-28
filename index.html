@@ -26,104 +26,13 @@ body{
   color:var(--text);
   background:
     linear-gradient(rgba(255,245,230,.95),rgba(255,245,230,.95)),
-    url("tajmahal-bg.png") center top / 900px no-repeat;
+    url("tajmahal-bg.png");
+  background-size:900px;
+  background-position:center top;
+  background-repeat:no-repeat;
 }
 
-/* ===== HERO ===== */
-.hero{
-  min-height:100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("images/tajmahal.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  padding:2rem;
-}
-
-.hero h1{
-  font-family:"Playfair Display",serif;
-  font-size:3rem;
-  margin-bottom:1rem;
-}
-
-.hero p{
-  font-size:1.2rem;
-  margin-bottom:2rem;
-}
-
-.cta{
-  background:var(--gold);
-  color:#000;
-  padding:.8rem 1.6rem;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-/* ===== GALERIE ===== */
-.gallery-section{
-  padding:4rem 2rem;
-  background:#111;
-  color:white;
-}
-
-.gallery-container{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:2rem;
-  align-items:center;
-}
-
-.gallery-image img{
-  width:100%;
-  border-radius:15px;
-}
-
-/* ===== UTILITAIRE ===== */
-.wrap{
-  max-width:1400px;
-  margin:auto;
-  padding:20px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Maison de l’Inde</h1>
-    <p>Saveurs authentiques du Nord de l’Inde</p>
-    <a href="#menu" class="cta">Voir la carte</a>
-  </div>
-</section>
-
-<!-- GALERIE -->
-<section class="gallery-section">
-  <div class="gallery-container">
-    <div>
-      <h2>Une cuisine authentique</h2>
-      <p>Découvrez notre savoir-faire traditionnel indien.</p>
-    </div>
-    <div class="gallery-image">
-      <img src="images/galerie.jpg" alt="Restaurant Maison de l’Inde">
-    </div>
-  </div>
-</section>
-
-<!-- TON CONTENU EXISTANT -->
-<section class="menu wrap" id="menu">
-  <!-- ton menu ici -->
-</section>
-
-</body>
-</html>
+.wrap{max-width:1400px;margin:auto;padding:20px}
 
 /* POP-UP BANNIÈRE */
 .popup{
@@ -291,6 +200,20 @@ footer a{
 
 <header class="wrap">
   <h1>MAISON DE L’INDE</h1>
+
+  <!-- SLIDER TAJ MAHAL -->
+  <div class="taj-slider">
+    <img src="assets/taj1.jpg" class="slide active" alt="Taj Mahal">
+    <img src="assets/taj2.jpg" class="slide" alt="Taj Mahal">
+    <img src="assets/taj3.jpg" class="slide" alt="Taj Mahal">
+    <img src="assets/taj4.jpg" class="slide" alt="Taj Mahal">
+    <img src="assets/taj5.jpg" class="slide" alt="Taj Mahal">
+    <img src="assets/taj6.jpg" class="slide" alt="Taj Mahal">
+    <img src="assets/taj7.jpg" class="slide" alt="Taj Mahal">
+    <img src="assets/taj8.jpg" class="slide" alt="Taj Mahal">
+    <img src="assets/taj9.jpg" class="slide" alt="Taj Mahal">
+  </div>
+
   <div class="flower"></div>
   <p>Restaurant indien – Spécialités du Nord de l’Inde</p>
   <p style="
@@ -437,4 +360,5 @@ footer a{
 
 </body>
 </html>
+
 

@@ -312,3 +312,27 @@ body::before{
     max-width: 800px;
     margin: auto;
 }
+.slider {
+    position: relative;
+    width: 100%;
+    height: 450px; /* tu peux ajuster */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(50%); /* <<< 50% d’opacité visuelle */
+}
+
+.slide.active {
+    opacity: 1;
+}

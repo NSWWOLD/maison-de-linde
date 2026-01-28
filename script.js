@@ -140,3 +140,14 @@ if (slides.length > 0) {
     slides[currentSlide].classList.add("active");
   }, 7000);
 }
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+
+function changeSlide() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+    index = (index + 1) % slides.length;
+}
+
+setInterval(changeSlide, 3000);
+changeSlide();

@@ -129,25 +129,43 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 1000);
 
 });
-// ===== SLIDER TAJ MAHAL =====
-const slides = document.querySelectorAll(".taj-slider .slide");
-let currentSlide = 0;
 
-if (slides.length > 0) {
-  setInterval(() => {
-    slides[currentSlide].classList.remove("active");
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("active");
-  }, 7000);
-}
-let index = 0;
-const slides = document.querySelectorAll('.slide');
-
-function changeSlide() {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-    index = (index + 1) % slides.length;
+/* === SLIDER MAISON DE L’INDE === */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 18px;
+    margin: 25px auto;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    z-index: 1;
 }
 
-setInterval(changeSlide, 3000);
-changeSlide();
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    filter: brightness(50%); /* 50% d’opacité visuelle */
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Pour que le texte passe au-dessus du slider */
+header, nav, .menu {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive */
+@media(max-width: 720px){
+    .slider {
+        height: 280px;
+    }
+}

@@ -2,19 +2,12 @@ index.html
 style.css
 script.js
 assets/
-└── taj-mahal-floral.svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
-  <g fill="none" stroke="#d4af37" stroke-width="2">
-    <!-- Base -->
-    <rect x="40" y="50" width="120" height="30" rx="5"/>
-    <!-- Dôme central -->
-    <path d="M50 50 Q100 0 150 50" />
-    <!-- Minarets -->
-    <line x1="45" y1="50" x2="45" y2="30"/>
-    <line x1="155" y1="50" x2="155" y2="30"/>
-    <!-- Cercles décoratifs -->
-    <circle cx="100" cy="45" r="3"/>
-    <circle cx="60" cy="55" r="2"/>
-    <circle cx="140" cy="55" r="2"/>
-  </g>
-</svg>
+├── taj1.jpg
+├── taj2.jpg
+├── taj3.jpg
+├── taj4.jpg
+├── taj5.jpg
+├── taj6.jpg
+├── taj7.jpg
+├── taj8.jpg
+├── taj-mahal-floral.svg

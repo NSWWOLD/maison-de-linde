@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } catch(e){ }
   });
 
-  // --- Delivery ribbon & modal (appear each visit; closing kept only for session) ---
+  // --- Delivery ribbon & modal ---
   const ribbon = document.getElementById('deliveryRibbon');
   const closeRibbon = document.getElementById('closeRibbon');
   const modal = document.getElementById('deliveryModal');
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const ribbonSessionKey = 'delivery_ribbon_closed_session';
   const modalSessionKey = 'delivery_modal_closed_session';
 
-  // helper to set body padding based on ribbon height
   function updateBodyPaddingForRibbon() {
     if (ribbon && getComputedStyle(ribbon).display !== 'none') {
       document.body.style.paddingTop = ribbon.offsetHeight + 'px';
@@ -39,18 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.style.paddingTop = '';
     }
   }
-  // update on load and on resize
+
   updateBodyPaddingForRibbon();
   window.addEventListener('resize', updateBodyPaddingForRibbon);
 
-  // Show modal on each new session (if not closed during this session)
   if (!sessionStorage.getItem(modalSessionKey)) {
     setTimeout(()=> {
       if (modal) openModal();
     }, 700);
   }
 
-  // If ribbon closed this session, hide it
   if (sessionStorage.getItem(ribbonSessionKey) === 'true') {
     ribbon && (ribbon.style.display = 'none');
     updateBodyPaddingForRibbon();
@@ -58,11 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   closeRibbon && closeRibbon.addEventListener('click', function() {
     if (ribbon) ribbon.style.display = 'none';
-    sessionStorage.setItem(ribbonSessionKey, 'true'); // only for this session
+    sessionStorage.setItem(ribbonSessionKey, 'true');
     updateBodyPaddingForRibbon();
   });
 
-  // Modal focus handling and trap
   let lastFocusedElement = null;
   function trapFocus(e) {
     if (!modal || modal.getAttribute('aria-hidden') === 'true') return;
@@ -87,10 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.setAttribute('aria-hidden','false');
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
-    // focus first focusable inside modal (prefer close button)
     const preferred = modal.querySelector('#closeModal');
     (preferred || modal.querySelector('[tabindex]') || modal).focus();
-
     document.addEventListener('keydown', trapFocus);
   }
 
@@ -109,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
     closeModalHandler();
   });
 
-  // small pdf fallback helper text
   setTimeout(()=> {
     if (pdfFrame) {
       try {
@@ -122,50 +115,26 @@ document.addEventListener('DOMContentLoaded', function() {
           hint.textContent = 'Si l’aperçu ne s’affiche pas, utilisez le bouton "Télécharger le menu".';
           container.appendChild(hint);
         }
-      } catch(e){
-        // cross-origin can block checking; ignore
-      }
+      } catch(e){}
     }
   }, 1000);
 
 });
 
-/* === SLIDER MAISON DE L’INDE === */
-.slider {
-    position: relative;
-    width: 100%;
-    height: 420px;
-    overflow: hidden;
-    border-radius: 18px;
-    margin: 25px auto;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-    z-index: 1;
-}
 
-.slide {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
-    filter: brightness(50%); /* 50% d’opacité visuelle */
-}
+// ===== SLIDER MAISON DE L’INDE =====
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slider .slide');
+  let index = 0;
 
-.slide.active {
-    opacity: 1;
-}
+  if (slides.length === 0) return;
 
-/* Pour que le texte passe au-dessus du slider */
-header, nav, .menu {
-    position: relative;
-    z-index: 2;
-}
+  function changeSlide() {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[index].classList.add('active');
+    index = (index + 1) % slides.length;
+  }
 
-/* Responsive */
-@media(max-width: 720px){
-    .slider {
-        height: 280px;
-    }
-}
+  changeSlide();
+  setInterval(changeSlide, 3000);
+});

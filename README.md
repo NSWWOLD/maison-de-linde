@@ -4,6 +4,7 @@ Fichiers ajoutés :
 - index.html
 - style.css
 - script.js
+- assets/
 
 Notes :
 1) Placez aussi `menu.pdf` (le PDF du menu) à la racine du dépôt si vous voulez l'aperçu dans l'iframe.

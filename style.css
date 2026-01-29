@@ -93,7 +93,7 @@ body::before{
   text-align:center;
   font-family:'Playfair Display',serif;
   color:var(--green-empire);
-  margin:32px 0 22px;
+  margin:38px 0 24px;
   padding-bottom:16px;
   letter-spacing:1px;
 }

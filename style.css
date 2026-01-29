@@ -60,27 +60,27 @@ body::before{
    Header
 ========================= */
 .site-header {
-  position: relative; text-align:center; padding: 60px 20px 40px;
+  position: relative; text-align:center; padding: 80px 30px 50px;
   background-color: var(--card);
 }
 .site-header::before {
   content:"";
   position:absolute; inset:0;
   background-image:url("assets/kashmir-floral.svg");
-  background-repeat:repeat; background-size:250px;
+  background-repeat:repeat; background-size:300px;
   opacity:0.05; pointer-events:none; z-index:0;
 }
 .header-content { position:relative; z-index:1; }
 .brand h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem; font-weight: 800;
+  font-size: 4rem; font-weight: 800;
   color: var(--green-empire);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  margin-bottom:10px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+  margin-bottom:13px;
 }
 .brand .tagline {
   font-family: 'Noto Sans', sans-serif;
-  font-size:1.2rem; font-weight:600;
+  font-size:1.5rem; font-weight:700;
   color: var(--velvet);
 }
 
@@ -142,21 +142,21 @@ body::before{
    Footer
 ========================= */
 .site-footer {
-  position:relative; margin-top:26px; padding:18px 0;
-  text-align:center; color:var(--muted); font-size:0.9rem;
+  position:relative; margin-top:30px; padding:22px 0;
+  text-align:center; color:var(--muted); font-size:1.1rem;
 }
 .site-footer::before {
   content:""; position:absolute; inset:0;
   background-image:url("assets/kashmir-floral.svg");
   background-repeat:repeat; background-size:250px;
-  opacity:0.05; pointer-events:none; z-index:0;
+  opacity:0.10; pointer-events:none; z-index:0;
 }
 
 /* =========================
    Buttons
 ========================= */
 .btn {
-  padding:10px 14px; border-radius:8px;
+  padding:16px 14px; border-radius:10px;
   background:var(--accent); color:#fff; border:0;
   cursor:pointer; font-weight:700; text-decoration:none; display:inline-block;
 }
@@ -173,18 +173,18 @@ body::before{
 .delivery-modal[aria-hidden="false"] { display:flex; }
 .modal-panel {
   background: linear-gradient(180deg,#fff8f6,#fff0ee);
-  border-radius:12px; max-width:760px; width:100%;
+  border-radius:16px; max-width:760px; width:100%;
   box-shadow:0 20px 60px rgba(0,0,0,0.4);
-  border:6px solid rgba(139,18,18,0.12);
+  border:8px solid rgba(139,18,18,0.12);
   overflow:hidden;
 }
 .modal-header {
   background: linear-gradient(90deg,var(--velvet),#8b0505);
-  color:#fff; padding:18px;
+  color:#fff; padding:20px;
 }
-.modal-header h2 { margin:0; font-size:1.4rem; }
-.modal-body { padding:18px; color:#222; font-size:1rem; }
-.modal-actions { padding:12px 18px 18px; display:flex; gap:10px; justify-content:flex-end; }
+.modal-header h2 { margin:0; font-size:1.6rem; }
+.modal-body { padding:20px; color:#222; font-size:1.3rem; }
+.modal-actions { padding:16px 20px 20px; display:flex; gap:10px; justify-content:flex-end; }
 
 /* =========================
    Focus

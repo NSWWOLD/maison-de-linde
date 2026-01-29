@@ -73,33 +73,28 @@ body::before{
 .header-content { position:relative; z-index:1; }
 .brand h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 4rem; font-weight: 800;
+  font-size: 4rem;
+  font-weight: 800;
   color: var(--green-empire);
   text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-  margin-bottom:13px;
-   header h1 {
+  margin-bottom: 40px; /* espace pour le motif */
   position: relative;
   display: inline-block;
-  font-size: 4rem; /* taille du titre */
-  font-weight: 800;
-  color: var(--green);
-  letter-spacing: 4px;
 }
 
 /* Soulignement floral indien luxe */
-header h1::after {
-  content: "✦ ✿ ✦"; /* motif floral indien stylisé */
+.brand h1::after {
+  content: "✦ ❁ ✦"; /* motif floral indien */
   position: absolute;
   left: 50%;
-  bottom: -22px; /* distance sous le titre */
+  bottom: -25px;
   transform: translateX(-50%);
-  font-size: 1.4rem;
-  color: var(--gold); /* doré luxe */
-  letter-spacing: 12px; /* espacement pour effet premium */
-  text-shadow: 0 0 8px rgba(212,175,55,0.4);
+  font-size: 1.7rem;
+  color: var(--gold);
+  letter-spacing: 14px;
+  text-shadow: 0 0 10px rgba(212,175,55,0.45);
 }
 
-}
 .brand .tagline {
   font-family: 'Noto Sans', sans-serif;
   font-size:1.5rem; font-weight:700;

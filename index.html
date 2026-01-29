@@ -95,6 +95,17 @@ header{
   box-shadow:0 20px 50px rgba(0,0,0,.08);
 }
 
+/* HEADER */
+header{
+  margin-top:40px;
+  background:var(--card);
+  padding:60px 20px;
+  text-align:center;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+/* Titre principal */
 header h1{
   font-family:"Playfair Display",serif;
   font-size:3.5rem;
@@ -102,23 +113,49 @@ header h1{
   letter-spacing:4px;
   position:relative;
   display:inline-block;
-  margin-bottom:65px; /* espace pour le motif */
+  margin-bottom:70px;
 }
 
-/* Soulignement floral + barres */
+/* Soulignement floral */
 header h1::after{
   content:"─── ✦─❁─✦ ───";
   position:absolute;
   left:50%;
-  bottom:-45px;
+  bottom:-50px;
   transform:translateX(-50%);
-  font-size:1.1rem;
+  font-size:1.3rem;
   color:var(--gold);
-  letter-spacing:1px;
+  letter-spacing:2px;
   text-shadow:0 0 10px rgba(212,175,55,0.45);
   font-weight:600;
 }
 
+/* MOBILE */
+@media(max-width:600px){
+  header h1{
+    font-size:2rem;
+    margin-bottom:65px;
+  }
+
+  header h1::after{
+    bottom:-45px;
+    font-size:1.1rem;
+    letter-spacing:1px;
+  }
+}
+
+/* ORDINATEUR */
+@media(min-width:601px){
+  header h1{
+    margin-bottom:70px;
+  }
+
+  header h1::after{
+    bottom:-50px;
+    font-size:1.3rem;
+    letter-spacing:2px;
+  }
+}
 
 .flower{
   margin:18px auto;

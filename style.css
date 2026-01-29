@@ -71,28 +71,38 @@ body::before{
   opacity:0.05; pointer-events:none; z-index:0;
 }
 .header-content { position:relative; z-index:1; }
+
+/* HEADER */
+header{
+  margin-top:40px;
+  background:var(--card);
+  padding:60px 20px;
+  text-align:center;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
 header h1{
   font-family:"Playfair Display",serif;
-  font-size:4rem;
-  color:var(--green-empire);
+  font-size:3.5rem;
+  color:var(--green);
   letter-spacing:4px;
-  text-shadow:3px 3px 4px rgba(0,0,0,0.2);
-  margin-bottom:40px;
   position:relative;
   display:inline-block;
+  margin-bottom:40px;
 }
 
 /* Soulignement floral indien luxe */
-header h1::after {
-  content: "✦ ❁ ✦";
-  position: absolute;
-  left: 50%;
-  bottom: -25px;
-  transform: translateX(-50%);
-  font-size: 1.7rem;
-  color: var(--gold);
-  letter-spacing: 14px;
-  text-shadow: 0 0 10px rgba(212,175,55,0.45);
+header h1::after{
+  content:"✦ ❁ ✦";
+  position:absolute;
+  left:50%;
+  bottom:-25px;
+  transform:translateX(-50%);
+  font-size:1.7rem;
+  color:var(--gold);
+  letter-spacing:14px;
+  text-shadow:0 0 10px rgba(212,175,55,0.45);
 }
 
 .brand .tagline {

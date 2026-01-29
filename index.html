@@ -100,7 +100,26 @@ header h1{
   font-size:3.5rem;
   color:var(--green);
   letter-spacing:4px;
+
+  /* AJOUT OBLIGATOIRE POUR LE SOULIGNEMENT */
+  position:relative;
+  display:inline-block;
+  margin-bottom:40px;
 }
+
+/* ⭐ AJOUTE CE BLOC JUSTE APRÈS header h1 */
+header h1::after{
+  content:"✦ ❁ ✦";
+  position:absolute;
+  left:50%;
+  bottom:-25px;
+  transform:translateX(-50%);
+  font-size:1.7rem;
+  color:var(--gold);
+  letter-spacing:14px;
+  text-shadow:0 0 10px rgba(212,175,55,0.45);
+}
+
 
 .flower{
   margin:18px auto;

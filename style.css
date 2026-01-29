@@ -77,6 +77,28 @@ body::before{
   color: var(--green-empire);
   text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
   margin-bottom:13px;
+   header h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 4rem; /* taille du titre */
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: 4px;
+}
+
+/* Soulignement floral indien luxe */
+header h1::after {
+  content: "✦ ✿ ✦"; /* motif floral indien stylisé */
+  position: absolute;
+  left: 50%;
+  bottom: -22px; /* distance sous le titre */
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  color: var(--gold); /* doré luxe */
+  letter-spacing: 12px; /* espacement pour effet premium */
+  text-shadow: 0 0 8px rgba(212,175,55,0.4);
+}
+
 }
 .brand .tagline {
   font-family: 'Noto Sans', sans-serif;

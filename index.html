@@ -264,16 +264,16 @@
     }
 
     .slide {
-      position: absolute;
-      inset: 0;
-      background-size: 90% 100% auto;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #000;
-      opacity: 0;
-      transition: opacity 1.0s ease-in-out;
-      filter: brightness(75%);
-    }
+    position: absolute;
+    inset: 0;
+    background-size: cover; /* remplit sans bandes */
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(0.9); /* ajuste la taille ici */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(75%);
+   }
 
     .slide.active {
       opacity: 1;

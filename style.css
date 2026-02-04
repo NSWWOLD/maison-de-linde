@@ -159,21 +159,21 @@ header {
 header h1 {
   font-family: "Playfair Display", serif;
   font-size: 3.0rem;
-  color: var(--green-empire);
+  color: var(green);
   letter-spacing: 4px;
   position: relative;
   display: inline-block;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 /* Motif floral sous le titre */
 header h1::after {
-  content: "─── ✦ ❁ ✦ ───";
+  content: "── ✦ ❁ ✦ ──";
   position: absolute;
   left: 50%;
   bottom: -30px;
   transform: translateX(-50%);
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--gold);
   letter-spacing: 1px;
   text-shadow: 0 0 10px rgba(212,175,55,0.45);

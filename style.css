@@ -190,7 +190,7 @@ header h1::after {
   content: "─── ✦ ❁ ✦ ───";
   position: absolute;
   left: 50%;
-  bottom: -50px;
+  bottom: -40px;
   transform: translateX(-50%);
   font-size: 1.3rem;
   color: var(--gold);

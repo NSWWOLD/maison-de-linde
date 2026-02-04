@@ -177,7 +177,7 @@ header h1::after {
   color: var(--gold);
   letter-spacing: 1px;
   text-shadow: 0 0 10px rgba(212,175,55,0.45);
-  font-weight: 550;
+  font-weight: 500;
 }
 
 /* Texte sous le titre */

@@ -41,13 +41,17 @@
     :root{
       --red:#8b0505;
       --gold:#d4af37;
-      --green empire:#004225;
+      --green-empire:#004225;
       --bg:#fff5e6;
       --card:#fffaf3;
       --text:#222;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
     body{
       font-family:"Noto Sans",sans-serif;
@@ -60,7 +64,11 @@
       background-repeat:no-repeat;
     }
 
-    .wrap{max-width:1400px;margin:auto;padding:20px}
+    .wrap{
+      max-width:1400px;
+      margin:auto;
+      padding:20px;
+    }
 
     /* POP-UP */
     .popup{
@@ -113,6 +121,37 @@
       text-decoration:none;
     }
 
+    /* BOUTON MENU EN HAUT À DROITE */
+    .menu-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #8b0505;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      z-index: 10000;
+      transition: all 0.25s ease;
+    }
+
+    .menu-button:hover {
+      background: #b22222;
+      transform: scale(1.05);
+    }
+
+    @media(max-width:900px){
+      .menu-button{
+        top: 16px;
+        right: 12px;
+        padding: 7px 12px;
+        font-size: 0.85rem;
+      }
+    }
+
     /* HEADER */
     header{
       margin-top:40px;
@@ -127,7 +166,7 @@
     header h1{
       font-family:"Playfair Display",serif;
       font-size:3.5rem;
-      color:var(--green);
+      color:var(--green-empire);
       letter-spacing:4px;
       position:relative;
       display:inline-block;
@@ -189,6 +228,47 @@
       font-weight:600;
     }
 
+    /* SLIDER */
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: 420px;
+      margin: 30px auto 0;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+
+    /* VERSION PC */
+    @media(min-width:900px){
+      .slider{
+        height:600px;
+      }
+    }
+
+    /* VERSION MOBILE */
+    @media(max-width:900px){
+      .slider{
+        height:300px;
+      }
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      filter: brightness(75%);
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
     /* MENU */
     .menu{
       margin-top:50px;
@@ -201,7 +281,7 @@
     .menu h2{
       text-align:center;
       font-family:"Playfair Display",serif;
-      color:var(--green);
+      color:var(--green-empire);
       margin-bottom:40px;
     }
 
@@ -245,62 +325,18 @@
       font-weight:700;
     }
 
-    /* RESPONSIVE */
+    /* RESPONSIVE MENU GRID */
     @media(max-width:900px){
       .menu-grid{grid-template-columns:1fr}
       header h1{font-size:2.4rem}
-    }
-
-   /* SLIDER */
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: 420px;
-  margin: 30px auto 0;
-  overflow: hidden;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.25);
-}
-
-/* VERSION PC */
-@media(min-width:900px){
-  .slider{
-    height:600px; /* ajuste ici */
-  }
-}
-
-/* VERSION MOBILE */
-@media(max-width:900px){
-  .slider{
-    height:300px;
-  }
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  filter: brightness(75%);
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-        
-      }
     }
   </style>
 </head>
 
 <body>
   
-<a href="#menu" class="menu-button">Menu</a>
+  <!-- Bouton Menu en haut à droite -->
+  <a href="#menu" class="menu-button">Menu</a>
 
   <!-- POP-UP -->
   <div class="popup" id="popup">
@@ -318,7 +354,8 @@
     </div>
   </div>
 
-  <header id="menu" class="menu wrap">
+  <!-- HEADER -->
+  <header class="wrap">
     <h1>MAISON DE L’INDE</h1>
 
     <div class="flower"></div>
@@ -351,7 +388,8 @@
     </div>
   </header>
 
-  <section class="menu wrap">
+  <!-- SECTION MENU -->
+  <section id="menu" class="menu wrap">
     <h2>Notre Carte Exceptionnelle</h2>
 
     <div class="menu-grid">
@@ -482,3 +520,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

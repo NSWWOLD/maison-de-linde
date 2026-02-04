@@ -160,7 +160,7 @@ header p,
 header p span {
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--red);
+  color: #555;
   line-height: 1.4;
   margin-bottom: 10px;
 }
@@ -173,7 +173,7 @@ header h1 {
   letter-spacing: 4px;
   position: relative;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 70px; /* espace sous le titre */
 }
 
 /* Soulignement floral */
@@ -181,7 +181,7 @@ header h1::after {
   content: "─── ✦ ❁ ✦ ───";
   position: absolute;
   left: 50%;
-  bottom: -30px;
+  bottom: -50px; /* position du motif */
   transform: translateX(-50%);
   font-size: 1.3rem;
   color: var(--gold);
@@ -199,10 +199,29 @@ header h1::after {
     radial-gradient(circle at center, var(--gold) 20%, transparent 21%) repeat-x;
   background-size: 14px 14px;
 }
-   
-header p {
-  color: var(--red);
-  font-weight: 600;
+
+/* =========================
+   Mobile Fix
+========================= */
+@media (max-width: 600px) {
+
+  /* Titre plus petit + moins d'espace */
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 45px;
+  }
+
+  /* Motif floral remonté */
+  header h1::after {
+    bottom: -25px;
+    font-size: 1.1rem;
+  }
+
+  /* Texte sous le titre légèrement réduit */
+  header p,
+  header p span {
+    font-size: 1.6rem;
+  }
 }
 
 /* =========================

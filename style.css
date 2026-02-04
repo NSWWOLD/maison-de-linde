@@ -247,7 +247,7 @@ header h1::after{
 .slide {
     position: absolute;
     inset: 0;
-    background-size: 100% auto;
+    background-size: 80% auto;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #000;

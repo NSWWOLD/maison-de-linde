@@ -1,401 +1,470 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Maison de l’Inde – Restaurant Indien Kashmiri à Saint-Louis</title>
+  <title>Maison de l’Inde – Restaurant Indien Kashmiri à Saint-Louis</title>
 
-<meta name="description" content="Maison de l’Inde – Restaurant Kashmiri à Saint-Louis. Spécialités indiennes, biryani, tandoori, plats végétariens. Sur place, à emporter, livraison et traiteur pour événements.">
-<meta name="keywords" content="restaurant indien saint-louis, cuisine indienne, kashmiri, biryani, tandoori, maison de l’inde, restaurant indien alsace, plats indiens, traiteur indien">
+  <meta name="description" content="Maison de l’Inde – Restaurant Kashmiri à Saint-Louis. Spécialités indiennes, biryani, tandoori, plats végétariens. Sur place, à emporter, livraison et traiteur pour événements.">
+  <meta name="keywords" content="restaurant indien saint-louis, cuisine indienne, kashmiri, biryani, tandoori, maison de l’inde, restaurant indien alsace, plats indiens, traiteur indien">
 
-<link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-<!-- SEO Local : Google Maps -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Maison de l’Inde",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "60 Avenue du Général de Gaulle",
-    "addressLocality": "Saint-Louis",
-    "postalCode": "68300",
-    "addressCountry": "FR"
-  },
-  "telephone": "+33953416514",
-  "servesCuisine": "Indienne, Kashmiri",
-  "url": "https://www.lamaisondelinde.fr",
-  "sameAs": [
-    "https://www.instagram.com/maison_de_linde"
-  ]
-}
-</script>
-
-<style>
-:root{
-  --red:#8b0505;
-  --gold:#d4af37;
-  --green:#004225;
-  --bg:#fff5e6;
-  --card:#fffaf3;
-  --text:#222;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  font-family:"Noto Sans",sans-serif;
-  color:var(--text);
-  background:
-    linear-gradient(rgba(255,245,230,.95),rgba(255,245,230,.95)),
-    url("tajmahal-bg.png");
-  background-size:900px;
-  background-position:center top;
-  background-repeat:no-repeat;
-}
-
-.wrap{max-width:1400px;margin:auto;padding:20px}
-
-/* POP-UP */
-.popup{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.45);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
-
-.popup-content{
-  background:linear-gradient(180deg,var(--red),#5c0303);
-  color:#fff;
-  padding:25px 30px;
-  border-radius:18px;
-  max-width:520px;
-  text-align:center;
-  box-shadow:0 30px 70px rgba(0,0,0,.3);
-}
-
-.popup-content h3{
-  font-family:"Playfair Display",serif;
-  font-size:1.6rem;
-  margin-bottom:10px;
-}
-
-.popup-content p{
-  font-size:.95rem;
-  line-height:1.5;
-}
-
-.popup-buttons{
-  margin-top:18px;
-  display:flex;
-  gap:12px;
-  justify-content:center;
-}
-
-.popup-buttons a,
-.popup-buttons button{
-  background:#fff;
-  color:var(--red);
-  border:0;
-  padding:10px 18px;
-  border-radius:30px;
-  font-weight:700;
-  cursor:pointer;
-  text-decoration:none;
-}
-
-/* HEADER */
-header{
-  margin-top:40px;
-  background:var(--card);
-  padding:60px 20px;
-  text-align:center;
-  border-radius:20px;
-  box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
-
-/* Titre principal */
-header h1{
-  font-family:"Playfair Display",serif;
-  font-size:3.5rem;
-  color:var(--green);
-  letter-spacing:4px;
-  position:relative;
-  display:inline-block;
-  margin-bottom:70px;
-}
-
-/* Soulignement floral */
-header h1::after{
-  content:"─── ✦ ❁ ✦ ───";
-  position:absolute;
-  left:50%;
-  bottom:-50px;
-  transform:translateX(-50%);
-  font-size:1.3rem;
-  color:var(--gold);
-  letter-spacing:2px;
-  text-shadow:0 0 10px rgba(212,175,55,0.45);
-  font-weight:600;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  header h1{
-    font-size:2rem;
-    margin-bottom:65px;
+  <!-- SEO Local : Google Maps -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Maison de l’Inde",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "60 Avenue du Général de Gaulle",
+      "addressLocality": "Saint-Louis",
+      "postalCode": "68300",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33953416514",
+    "servesCuisine": "Indienne, Kashmiri",
+    "url": "https://www.lamaisondelinde.fr",
+    "sameAs": [
+      "https://www.instagram.com/maison_de_linde"
+    ]
   }
+  </script>
 
-  header h1::after{
-    bottom:-45px;
-    font-size:1.1rem;
-    letter-spacing:1px;
-  }
-}
+  <style>
+    :root{
+      --red:#8b0505;
+      --gold:#d4af37;
+      --green:#004225;
+      --bg:#fff5e6;
+      --card:#fffaf3;
+      --text:#222;
+    }
 
-/* ORDINATEUR */
-@media(min-width:601px){
-  header h1{
-    margin-bottom:70px;
-  }
+    *{box-sizing:border-box;margin:0;padding:0}
 
-  header h1::after{
-    bottom:-50px;
-    font-size:1.3rem;
-    letter-spacing:2px;
-  }
-}
+    body{
+      font-family:"Noto Sans",sans-serif;
+      color:var(--text);
+      background:
+        linear-gradient(rgba(255,245,230,.95),rgba(255,245,230,.95)),
+        url("tajmahal-bg.png");
+      background-size:900px;
+      background-position:center top;
+      background-repeat:no-repeat;
+    }
 
-.flower{
-  margin:18px auto;
-  width:160px;
-  height:14px;
-  background:
-    radial-gradient(circle at center,var(--gold) 20%,transparent 21%) repeat-x;
-  background-size:14px 14px;
-}
+    .wrap{max-width:1400px;margin:auto;padding:20px}
 
-header p{
-  color:var(--red);
-  font-weight:600;
-}
+    /* POP-UP */
+    .popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.45);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:9999;
+    }
 
-/* MENU */
-.menu{
-  margin-top:50px;
-  background:var(--card);
-  padding:50px 30px;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,.06);
-}
+    .popup-content{
+      background:linear-gradient(180deg,var(--red),#5c0303);
+      color:#fff;
+      padding:25px 30px;
+      border-radius:18px;
+      max-width:520px;
+      text-align:center;
+      box-shadow:0 30px 70px rgba(0,0,0,.3);
+    }
 
-.menu h2{
-  text-align:center;
-  font-family:"Playfair Display",serif;
-  color:var(--green);
-  margin-bottom:40px;
-}
+    .popup-content h3{
+      font-family:"Playfair Display",serif;
+      font-size:1.6rem;
+      margin-bottom:10px;
+    }
 
-.menu-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:40px;
-}
+    .popup-content p{
+      font-size:.95rem;
+      line-height:1.5;
+    }
 
-.section h3{
-  font-family:"Playfair Display",serif;
-  color:var(--red);
-  border-bottom:2px solid var(--gold);
-  padding
-}
-  <body>
+    .popup-buttons{
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+    }
 
-<!-- POP-UP -->
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <h3>🎁 HOME DELIVERY AVAILABLE 🎁</h3>
-    <p>
-      Livraison dans un rayon de <strong>15 km autour du restaurant</strong><br>
-      Du lundi au jeudi : <strong>12h–14h / 17h–22h</strong><br>
-      Vendredi & samedi : <strong>12h–14h30</strong>
-    </p>
-    <div class="popup-buttons">
-      <a href="tel:+33953416514">📞 Appeler</a>
-      <button onclick="document.getElementById('popup').style.display='none'">✓ D’accord</button>
+    .popup-buttons a,
+    .popup-buttons button{
+      background:#fff;
+      color:var(--red);
+      border:0;
+      padding:10px 18px;
+      border-radius:30px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+    }
+
+    /* HEADER */
+    header{
+      margin-top:40px;
+      background:var(--card);
+      padding:60px 20px;
+      text-align:center;
+      border-radius:20px;
+      box-shadow:0 20px 50px rgba(0,0,0,.08);
+    }
+
+    /* Titre principal */
+    header h1{
+      font-family:"Playfair Display",serif;
+      font-size:3.5rem;
+      color:var(--green);
+      letter-spacing:4px;
+      position:relative;
+      display:inline-block;
+      margin-bottom:70px;
+    }
+
+    /* Soulignement floral */
+    header h1::after{
+      content:"─── ✦ ❁ ✦ ───";
+      position:absolute;
+      left:50%;
+      bottom:-50px;
+      transform:translateX(-50%);
+      font-size:1.3rem;
+      color:var(--gold);
+      letter-spacing:2px;
+      text-shadow:0 0 10px rgba(212,175,55,0.45);
+      font-weight:600;
+    }
+
+    /* MOBILE */
+    @media(max-width:600px){
+      header h1{
+        font-size:2rem;
+        margin-bottom:65px;
+      }
+
+      header h1::after{
+        bottom:-45px;
+        font-size:1.1rem;
+        letter-spacing:1px;
+      }
+    }
+
+    /* ORDINATEUR */
+    @media(min-width:601px){
+      header h1{
+        margin-bottom:70px;
+      }
+
+      header h1::after{
+        bottom:-50px;
+        font-size:1.3rem;
+        letter-spacing:2px;
+      }
+    }
+
+    .flower{
+      margin:18px auto;
+      width:160px;
+      height:14px;
+      background:
+        radial-gradient(circle at center,var(--gold) 20%,transparent 21%) repeat-x;
+      background-size:14px 14px;
+    }
+
+    header p{
+      color:var(--red);
+      font-weight:600;
+    }
+
+    /* MENU */
+    .menu{
+      margin-top:50px;
+      background:var(--card);
+      padding:50px 30px;
+      border-radius:20px;
+      box-shadow:0 15px 40px rgba(0,0,0,.06);
+    }
+
+    .menu h2{
+      text-align:center;
+      font-family:"Playfair Display",serif;
+      color:var(--green);
+      margin-bottom:40px;
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:40px;
+    }
+
+    .section h3{
+      font-family:"Playfair Display",serif;
+      color:var(--red);
+      border-bottom:2px solid var(--gold);
+      padding-bottom:6px;
+      margin:22px 0 12px;
+    }
+
+    .item{
+      display:flex;
+      justify-content:space-between;
+      font-size:.95rem;
+      margin:5px 0;
+    }
+
+    .item span:last-child{
+      color:var(--red);
+      font-weight:700;
+    }
+
+    /* FOOTER */
+    footer{
+      margin:70px 0 30px;
+      text-align:center;
+      font-size:1.1rem;
+      color:#555;
+    }
+
+    footer a{
+      color:var(--red);
+      text-decoration:none;
+      font-weight:700;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .menu-grid{grid-template-columns:1fr}
+      header h1{font-size:2.4rem}
+    }
+
+    /* SLIDER */
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: 420px;
+      margin: 30px auto 0;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      filter: brightness(75%);
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    @media(max-width:900px){
+      .slider{
+        height:260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- POP-UP -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h3>🎁 HOME DELIVERY AVAILABLE 🎁</h3>
+      <p>
+        Livraison dans un rayon de <strong>15 km autour du restaurant</strong><br>
+        Du lundi au jeudi : <strong>12h–14h / 17h–22h</strong><br>
+        Vendredi & samedi : <strong>12h–14h30</strong>
+      </p>
+      <div class="popup-buttons">
+        <a href="tel:+33953416514">📞 Appeler</a>
+        <button onclick="document.getElementById('popup').style.display='none'">✓ D’accord</button>
+      </div>
     </div>
   </div>
-</div>
 
-<header class="wrap">
-  <h1>MAISON DE L’INDE</h1>
+  <header class="wrap">
+    <h1>MAISON DE L’INDE</h1>
 
-  <div class="flower"></div>
+    <div class="flower"></div>
 
-  <p>Restaurant indien – Spécialités du Nord de l’Inde</p>
+    <p>Restaurant indien – Spécialités du Nord de l’Inde</p>
 
-  <p style="margin-top:20px;font-size:1.5rem;font-weight:700;color:#555;">
-    Nous sommes ouverts 6 jours sur 7<br>
-    <span style="color:#8b0505;font-weight:700;">
-      Sur Place • À Emporter • En Livraison
-    </span>
-  </p>
+    <p style="margin-top:20px;font-size:1.5rem;font-weight:700;color:#555;">
+      Nous sommes ouverts 6 jours sur 7<br>
+      <span style="color:#8b0505;font-weight:700;">
+        Sur Place • À Emporter • En Livraison
+      </span>
+    </p>
 
-  <!-- SLIDER -->
-  <div class="slider">
-    <div class="slide active" style="background-image: url('assets/taj1.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj2.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj3.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj4.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj5.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj6.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj7.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj8.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj9.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj10.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj11.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj12.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj13.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/taj14.jpg');"></div>
-  </div>
-</header>
+    <!-- SLIDER -->
+    <div class="slider">
+      <div class="slide active" style="background-image: url('assets/taj1.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj2.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj3.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj4.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj5.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj6.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj7.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj8.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj9.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj10.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj11.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj12.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj13.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/taj14.jpg');"></div>
+    </div>
+  </header>
 
   <section class="menu wrap">
-  <h2>Notre Carte Exceptionnelle</h2>
+    <h2>Notre Carte Exceptionnelle</h2>
 
-  <div class="menu-grid">
+    <div class="menu-grid">
 
-    <!-- COLONNE 1 -->
-    <div class="section">
-      <h3>Entrées</h3>
-      <div class="item"><span>Entrée Mix (2 pers)</span><span>22,00 €</span></div>
-      <div class="item"><span>Assortiment de beignets (2 pers)</span><span>18,00 €</span></div>
-      <div class="item"><span>Shammi kebab</span><span>10,00 €</span></div>
-      <div class="item"><span>Onion bajia</span><span>8,00 €</span></div>
-      <div class="item"><span>Vegetable samossa</span><span>9,00 €</span></div>
-      <div class="item"><span>Salade Hindi</span><span>8,00 €</span></div>
-      <div class="item"><span>Raîta</span><span>7,00 €</span></div>
-      <div class="item"><span>Baigan pakora</span><span>9,00 €</span></div>
-      <div class="item"><span>Fromage pakora</span><span>9,00 €</span></div>
+      <!-- COLONNE 1 -->
+      <div class="section">
+        <h3>Entrées</h3>
+        <div class="item"><span>Entrée Mix (2 pers)</span><span>22,00 €</span></div>
+        <div class="item"><span>Assortiment de beignets (2 pers)</span><span>18,00 €</span></div>
+        <div class="item"><span>Shammi kebab</span><span>10,00 €</span></div>
+        <div class="item"><span>Onion bajia</span><span>8,00 €</span></div>
+        <div class="item"><span>Vegetable samossa</span><span>9,00 €</span></div>
+        <div class="item"><span>Salade Hindi</span><span>8,00 €</span></div>
+        <div class="item"><span>Raîta</span><span>7,00 €</span></div>
+        <div class="item"><span>Baigan pakora</span><span>9,00 €</span></div>
+        <div class="item"><span>Fromage pakora</span><span>9,00 €</span></div>
 
-      <h3>Grillades Hindi</h3>
-      <div class="item"><span>Assortiments tandoori (2 pers.)</span><span>35,00 €</span></div>
-      <div class="item"><span>Crevettes pakora</span><span>12,00 €</span></div>
-      <div class="item"><span>Poulet tandoori</span><span>12,00 €</span></div>
-      <div class="item"><span>Poulet tikka</span><span>12,00 €</span></div>
-      <div class="item"><span>Agneau tikka</span><span>16,00 €</span></div>
-      <div class="item"><span>Seekh kebab</span><span>17,00 €</span></div>
-      <div class="item"><span>Poisson tikka</span><span>17,00 €</span></div>
-      <div class="item"><span>Gambas tandoori</span><span>24,00 €</span></div>
+        <h3>Grillades Hindi</h3>
+        <div class="item"><span>Assortiments tandoori (2 pers.)</span><span>35,00 €</span></div>
+        <div class="item"><span>Crevettes pakora</span><span>12,00 €</span></div>
+        <div class="item"><span>Poulet tandoori</span><span>12,00 €</span></div>
+        <div class="item"><span>Poulet tikka</span><span>12,00 €</span></div>
+        <div class="item"><span>Agneau tikka</span><span>16,00 €</span></div>
+        <div class="item"><span>Seekh kebab</span><span>17,00 €</span></div>
+        <div class="item"><span>Poisson tikka</span><span>17,00 €</span></div>
+        <div class="item"><span>Gambas tandoori</span><span>24,00 €</span></div>
 
-      <h3>Pains & Nâns & Riz</h3>
-      <div class="item"><span>Roti</span><span>4,00 €</span></div>
-      <div class="item"><span>Nân</span><span>3,50 €</span></div>
-      <div class="item"><span>Nân fromage</span><span>5,00 €</span></div>
-      <div class="item"><span>Stuffed paraha</span><span>6,00 €</span></div>
-      <div class="item"><span>Keema nân</span><span>6,00 €</span></div>
-      <div class="item"><span>Nân à l’ail</span><span>5,00 €</span></div>
-      <div class="item"><span>Nân ail fromage</span><span>6,00 €</span></div>
-      <div class="item"><span>Riz Kashmiri</span><span>7,00 €</span></div>
-      <div class="item"><span>Riz Safran</span><span>6,00 €</span></div>
+        <h3>Pains & Nâns & Riz</h3>
+        <div class="item"><span>Roti</span><span>4,00 €</span></div>
+        <div class="item"><span>Nân</span><span>3,50 €</span></div>
+        <div class="item"><span>Nân fromage</span><span>5,00 €</span></div>
+        <div class="item"><span>Stuffed paraha</span><span>6,00 €</span></div>
+        <div class="item"><span>Keema nân</span><span>6,00 €</span></div>
+        <div class="item"><span>Nân à l’ail</span><span>5,00 €</span></div>
+        <div class="item"><span>Nân ail fromage</span><span>6,00 €</span></div>
+        <div class="item"><span>Riz Kashmiri</span><span>7,00 €</span></div>
+        <div class="item"><span>Riz Safran</span><span>6,00 €</span></div>
+      </div>
+
+      <!-- COLONNE 2 -->
+      <div class="section">
+        <h3>Agneau</h3>
+        <div class="item"><span>Agneau baigan</span><span>20,00 €</span></div>
+        <div class="item"><span>Agneau Roghan Josh</span><span>21,00 €</span></div>
+        <div class="item"><span>Agneau tikka masala</span><span>20,00 €</span></div>
+        <div class="item"><span>Agneau moghalai</span><span>20,00 €</span></div>
+        <div class="item"><span>Agneau curry</span><span>19,00 €</span></div>
+        <div class="item"><span>Agneau sagwala</span><span>19,00 €</span></div>
+        <div class="item"><span>Agneau Hyderabadi</span><span>20,00 €</span></div>
+        <div class="item"><span>Agneau madras</span><span>19,00 €</span></div>
+        <div class="item"><span>Agneau dal</span><span>19,00 €</span></div>
+        <div class="item"><span>Agneau Shahi Korma</span><span>20,00 €</span></div>
+        <div class="item"><span>Agneau Sheekh Masala</span><span>20,00 €</span></div>
+
+        <h3>Poulet</h3>
+        <div class="item"><span>Poulet tikka masala</span><span>18,00 €</span></div>
+        <div class="item"><span>Butter chicken</span><span>18,00 €</span></div>
+        <div class="item"><span>Poulet curry</span><span>17,00 €</span></div>
+        <div class="item"><span>Poulet madras</span><span>17,00 €</span></div>
+        <div class="item"><span>Poulet Hyderabadi</span><span>18,00 €</span></div>
+        <div class="item"><span>Poulet Korma</span><span>17,00 €</span></div>
+        <div class="item"><span>Poulet moghalai</span><span>18,00 €</span></div>
+        <div class="item"><span>Poulet palak</span><span>17,00 €</span></div>
+        <div class="item"><span>Poulet Roghan Josh</span><span>19,00 €</span></div>
+        <div class="item"><span>Poulet dal</span><span>17,00 €</span></div>
+
+        <h3>Biryani</h3>
+        <div class="item"><span>Agneau biryani</span><span>22,00 €</span></div>
+        <div class="item"><span>Poulet biryani</span><span>20,00 €</span></div>
+        <div class="item"><span>Légumes biryani</span><span>18,00 €</span></div>
+        <div class="item"><span>Crevettes biryani</span><span>21,00 €</span></div>
+        <div class="item"><span>Biryani Mix TajMahal</span><span>27,00 €</span></div>
+      </div>
+
+      <!-- COLONNE 3 -->
+      <div class="section">
+        <h3>Crevette & Poisson</h3>
+        <div class="item"><span>Crevettes curry</span><span>19,00 €</span></div>
+        <div class="item"><span>Crevettes madras</span><span>19,00 €</span></div>
+        <div class="item"><span>Gambas masala</span><span>26,00 €</span></div>
+        <div class="item"><span>Crevettes jalfrezi</span><span>19,00 €</span></div>
+        <div class="item"><span>Crevettes Hyderabadi</span><span>20,00 €</span></div>
+        <div class="item"><span>Crevettes korma</span><span>20,00 €</span></div>
+
+        <div class="item"><span>Poisson masala</span><span>20,00 €</span></div>
+        <div class="item"><span>Poisson Goa curry</span><span>20,00 €</span></div>
+        <div class="item"><span>Poisson madras</span><span>20,00 €</span></div>
+        <div class="item"><span>Poisson Hyderabadi</span><span>21,00 €</span></div>
+        <div class="item"><span>Noix-st-jacques masala</span><span>25,00 €</span></div>
+
+        <h3>Légumes</h3>
+        <div class="item"><span>Aloo gobhi</span><span>17,00 €</span></div>
+        <div class="item"><span>Palak panir</span><span>16,00 €</span></div>
+        <div class="item"><span>Aloo panir</span><span>15,00 €</span></div>
+        <div class="item"><span>Matar panir</span><span>15,00 €</span></div>
+        <div class="item"><span>Saag aloo</span><span>15,00 €</span></div>
+        <div class="item"><span>Baigan bharta</span><span>15,00 €</span></div>
+        <div class="item"><span>Légumes Korma</span><span>15,00 €</span></div>
+        <div class="item"><span>Mix dal</span><span>15,00 €</span></div>
+        <div class="item"><span>Dal palak</span><span>15,00 €</span></div>
+        <div class="item"><span>Butter panir</span><span>16,00 €</span></div>
+
+        <h3>Desserts</h3>
+        <div class="item"><span>Gâteau maison</span><span>6,00 €</span></div>
+        <div class="item"><span>Glace maison kulfi</span><span>8,00 €</span></div>
+        <div class="item"><span>Gulab jamun maison</span><span>6,00 €</span></div>
+        <div class="item"><span>Glace pundjab</span><span>6,00 €</span></div>
+        <div class="item"><span>Assiette maison</span><span>15,00 €</span></div>
+        <div class="item"><span>Salade de fruits fraîche</span><span>7,00 €</span></div>
+        <div class="item"><span>Sorbets</span><span>5,00 €</span></div>
+      </div>
+
     </div>
+  </section>
 
-    <!-- COLONNE 2 -->
-    <div class="section">
-      <h3>Agneau</h3>
-      <div class="item"><span>Agneau baigan</span><span>20,00 €</span></div>
-      <div class="item"><span>Agneau Roghan Josh</span><span>21,00 €</span></div>
-      <div class="item"><span>Agneau tikka masala</span><span>20,00 €</span></div>
-      <div class="item"><span>Agneau moghalai</span><span>20,00 €</span></div>
-      <div class="item"><span>Agneau curry</span><span>19,00 €</span></div>
-      <div class="item"><span>Agneau sagwala</span><span>19,00 €</span></div>
-      <div class="item"><span>Agneau Hyderabadi</span><span>20,00 €</span></div>
-      <div class="item"><span>Agneau madras</span><span>19,00 €</span></div>
-      <div class="item"><span>Agneau dal</span><span>19,00 €</span></div>
-      <div class="item"><span>Agneau Shahi Korma</span><span>20,00 €</span></div>
-      <div class="item"><span>Agneau Sheekh Masala</span><span>20,00 €</span></div>
+  <footer>
+    <p><strong>MAISON DE L’INDE</strong></p>
+    <p>60 Avenue du Général de Gaulle – 68300 Saint-Louis</p>
+    <p>📞 09 53 41 65 14 – 06 27 57 44 13</p>
+    <p>Lundi au samedi : 11h30 – 14h30 / 17h30 – 23h00 • Fermé le dimanche</p>
+    <p><strong>Site :</strong> <a href="https://www.lamaisondelinde.fr" target="_blank" rel="noopener">www.lamaisondelinde.fr</a></p>
+    <p>
+      Restaurant & Traiteur – Mariages, Baptêmes, Anniversaires, Événements Privés & Professionnels<br>
+      <a href="https://www.instagram.com/maison_de_linde/" target="_blank">Notre Page Instagram</a>
+    </p>
+  </footer>
 
-      <h3>Poulet</h3>
-      <div class="item"><span>Poulet tikka masala</span><span>18,00 €</span></div>
-      <div class="item"><span>Butter chicken</span><span>18,00 €</span></div>
-      <div class="item"><span>Poulet curry</span><span>17,00 €</span></div>
-      <div class="item"><span>Poulet madras</span><span>17,00 €</span></div>
-      <div class="item"><span>Poulet Hyderabadi</span><span>18,00 €</span></div>
-      <div class="item"><span>Poulet Korma</span><span>17,00 €</span></div>
-      <div class="item"><span>Poulet moghalai</span><span>18,00 €</span></div>
-      <div class="item"><span>Poulet palak</span><span>17,00 €</span></div>
-      <div class="item"><span>Poulet Roghan Josh</span><span>19,00 €</span></div>
-      <div class="item"><span>Poulet dal</span><span>17,00 €</span></div>
-
-      <h3>Biryani</h3>
-      <div class="item"><span>Agneau biryani</span><span>22,00 €</span></div>
-      <div class="item"><span>Poulet biryani</span><span>20,00 €</span></div>
-      <div class="item"><span>Légumes biryani</span><span>18,00 €</span></div>
-      <div class="item"><span>Crevettes biryani</span><span>21,00 €</span></div>
-      <div class="item"><span>Biryani Mix TajMahal</span><span>27,00 €</span></div>
-    </div>
-
-    <!-- COLONNE 3 -->
-    <div class="section">
-      <h3>Crevette & Poisson</h3>
-      <div class="item"><span>Crevettes curry</span><span>19,00 €</span></div>
-      <div class="item"><span>Crevettes madras</span><span>19,00 €</span></div>
-      <div class="item"><span>Gambas masala</span><span>26,00 €</span></div>
-      <div class="item"><span>Crevettes jalfrezi</span><span>19,00 €</span></div>
-      <div class="item"><span>Crevettes Hyderabadi</span><span>20,00 €</span></div>
-      <div class="item"><span>Crevettes korma</span><span>20,00 €</span></div>
-
-      <div class="item"><span>Poisson masala</span><span>20,00 €</span></div>
-      <div class="item"><span>Poisson Goa curry</span><span>20,00 €</span></div>
-      <div class="item"><span>Poisson madras</span><span>20,00 €</span></div>
-      <div class="item"><span>Poisson Hyderabadi</span><span>21,00 €</span></div>
-      <div class="item"><span>Noix-st-jacques masala</span><span>25,00 €</span></div>
-
-      <h3>Légumes</h3>
-      <div class="item"><span>Aloo gobhi</span><span>17,00 €</span></div>
-      <div class="item"><span>Palak panir</span><span>16,00 €</span></div>
-      <div class="item"><span>Aloo panir</span><span>15,00 €</span></div>
-      <div class="item"><span>Matar panir</span><span>15,00 €</span></div>
-      <div class="item"><span>Saag aloo</span><span>15,00 €</span></div>
-      <div class="item"><span>Baigan bharta</span><span>15,00 €</span></div>
-      <div class="item"><span>Légumes Korma</span><span>15,00 €</span></div>
-      <div class="item"><span>Mix dal</span><span>15,00 €</span></div>
-      <div class="item"><span>Dal palak</span><span>15,00 €</span></div>
-      <div class="item"><span>Butter panir</span><span>16,00 €</span></div>
-
-      <h3>Desserts</h3>
-      <div class="item"><span>Gâteau maison</span><span>6,00 €</span></div>
-      <div class="item"><span>Glace maison kulfi</span><span>8,00 €</span></div>
-      <div class="item"><span>Gulab jamun maison</span><span>6,00 €</span></div>
-      <div class="item"><span>Glace pundjab</span><span>6,00 €</span></div>
-      <div class="item"><span>Assiette maison</span><span>15,00 €</span></div>
-      <div class="item"><span>Salade de fruits fraîche</span><span>7,00 €</span></div>
-      <div class="item"><span>Sorbets</span><span>5,00 €</span></div>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p><strong>MAISON DE L’INDE</strong></p>
-  <p>60 Avenue du Général de Gaulle – 68300 Saint-Louis</p>
-  <p>📞 09 53 41 65 14 – 06 27 57 44 13</p>
-  <p>Lundi au samedi : 11h30 – 14h30 / 17h30 – 23h00 • Fermé le dimanche</p>
-  <p><strong>Site :</strong> <a href="https://www.lamaisondelinde.fr" target="_blank" rel="noopener">www.lamaisondelinde.fr</a></p>
-  <p>
-    Restaurant & Traiteur – Mariages, Baptêmes, Anniversaires, Événements Privés & Professionnels<br>
-    <a href="https://www.instagram.com/maison_de_linde/" target="_blank">Notre Page Instagram</a>
-  </p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

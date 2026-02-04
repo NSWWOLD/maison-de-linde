@@ -247,13 +247,13 @@ header h1::after{
 .slide {
     position: absolute;
     inset: 0;
-    background-size: 80% auto;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #000;
     opacity: 0;
-    transition: opacity 1.1s ease-in-out;
-    filter: brightness(70%); /* opacité visuelle */
+    transition: opacity 1s ease-in-out;
+    filter: brightness(75%); /* opacité visuelle */
 }
 
 .slide.active {

@@ -158,7 +158,7 @@ header {
 /* Titre principal */
 header h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3,6rem;
+  font-size: 3.6rem;
   color: var(--green-empire);
   letter-spacing: 4px;
   position: relative;

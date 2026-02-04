@@ -154,15 +154,19 @@ header {
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
+
+/* Ligne : "Restaurant indien – Spécialités du Nord de l’Inde" */
 header p:first-of-type {
-  font-size: 1.5rem;
+  font-size: 1.5rem;   /* même taille que les deux autres lignes */
   font-weight: 700;
   color: #555;
+  margin-bottom: 10px;
 }
 
+/* Titre principal */
 header h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3.5rem;
+  font-size: 3.5rem;   /* plus grand que les 3 lignes */
   color: var(--green-empire);
   letter-spacing: 4px;
   position: relative;
@@ -184,6 +188,7 @@ header h1::after {
   font-weight: 600;
 }
 
+/* Fleur décorative */
 .flower {
   margin: 18px auto;
   width: 160px;
@@ -192,6 +197,14 @@ header h1::after {
     radial-gradient(circle at center, var(--gold) 20%, transparent 21%) repeat-x;
   background-size: 14px 14px;
 }
+
+/* Les deux lignes du bas ("Nous sommes ouverts…" + "Sur place…") */
+header p {
+  font-size: 1.5rem;   /* même taille que la ligne du dessus */
+  color: var(--red);
+  font-weight: 600;
+}
+
 
 header p {
   color: var(--red);

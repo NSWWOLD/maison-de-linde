@@ -157,22 +157,33 @@ header {
 
 /* Ligne : "Restaurant indien – Spécialités du Nord de l’Inde" */
 header p:first-of-type {
-  font-size: 1.5rem;   /* même taille que les deux autres lignes */
+  font-size: 1.5rem;
   font-weight: 700;
   color: #555;
   margin-bottom: 10px;
 }
 
-/* Titre principal */
+/* Harmonisation des 3 lignes sous le titre */
+header p,
+header p span,
+header .subinfo,
+header .subinfo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #555;
+  line-height: 1.4;
+}
+
 header h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3.5rem;   /* plus grand que les 3 lignes */
+  font-size: 4rem;
   color: var(--green-empire);
   letter-spacing: 4px;
   position: relative;
   display: inline-block;
   margin-bottom: 70px;
 }
+
 
 /* Soulignement floral */
 header h1::after {

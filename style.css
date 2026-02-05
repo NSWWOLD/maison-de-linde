@@ -184,13 +184,13 @@ header h1::after {
 .subinfo {
   font-size: 2rem;
   font-weight: 700;
-  color: #555;
+  color: #0A0003;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
 .subinfo-highlight {
-  color: var(--red);
+  color: #0A0003;
   font-weight: 700;
 }
 

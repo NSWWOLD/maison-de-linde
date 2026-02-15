@@ -111,16 +111,23 @@ body::before {
   background: #b22222;
   transform: scale(1.05);
 }
-
-/* Version mobile : bouton un peu plus petit */
+/* Version mobile : boutons plus petits */
 @media (max-width: 900px) {
+
   .menu-button {
     top: 15px;
     right: 15px;
     padding: 7px 12px;
     font-size: 0.8rem;
-    border-radius: 40px;
   }
+
+  .reservations-button {
+    top: 15px;
+    left: 15px;
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+
 }
 
 /* =========================

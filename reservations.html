@@ -1,4 +1,4 @@
-t<!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
@@ -13,7 +13,7 @@ t<!doctype html>
       max-width: 900px;
       margin: auto;
       color: #222;
-      background: #f7f1ec; /* beige rosé clair */
+      background: #faf4ef; /* beige rosé encore plus léger */
     }
 
     h1 {
@@ -46,15 +46,25 @@ t<!doctype html>
     .button:hover {
       background: #600000;
     }
-    .button-green { background: #0f7b4f; /* ton vert */                
-    } 
-    
-    .button-green:hover { background: #0c5f3d; 
+
+    .button-green {
+      display: inline-block;
+      padding: 12px 18px;
+      background: #0f7b4f; /* ton vert */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      font-weight: bold;
     }
-    
+
+    .button-green:hover {
+      background: #0c5f3d;
+    }
+
     form {
       margin-top: 15px;
-      background: #white;
+      background: #ffffff; /* corrigé */
       padding: 20px;
       border-radius: 8px;
       border: 1px solid #ddd;
@@ -89,6 +99,17 @@ t<!doctype html>
       border-radius: 8px;
       overflow: hidden;
     }
+
+    /* Supprimer le contour bleu autour des boutons */
+    a.button, a.button-green {
+      outline: none !important;
+      border: none !important;
+    }
+
+    a.button:focus, a.button-green:focus {
+      outline: none !important;
+      border: none !important;
+    }
   </style>
 </head>
 
@@ -99,12 +120,12 @@ t<!doctype html>
 <!-- Téléphone -->
 <h2>📞 Réserver par téléphone</h2>
 <p>Appelez-nous directement :</p>
-<p><strong>09 53 41 65 14</strong><br>
+<p><strong>09 53 41 65 14</strong></p>
 <a class="button" href="tel:+33953416514">📞 Appeler maintenant</a>
 
 <!-- Email -->
 <h2>✉️ Réserver par email</h2>
-<p>Possibilité de réserver par email mais privilégier le téléphone en cas de non retour dans les 3 heures:</p>
+<p>Possibilité de réserver par email mais privilégier le téléphone en cas de non retour dans les 3 heures :</p>
 <a class="button-green" href="mailto:AZER6851@OUTLOOK.FR">✉️ Envoyer un email</a>
 
 <!-- Formulaire -->
@@ -133,15 +154,15 @@ t<!doctype html>
 
 <!-- Horaires -->
 <h2>🕒 Horaires d’ouverture</h2>
-<p>Lundi au Jeudi : <strong>11h30 – 14h30 / 17h30 – 22h00</strong><br>
-<p>Vendredi au Samedi : <strong>11h30 – 14h30 / 17h30 – 23h00</strong><br>
-   Dimanche : <strong>Fermé</strong></p>
+<p>Lundi au Jeudi : <strong>11h30 – 14h30 / 17h30 – 22h00</strong></p>
+<p>Vendredi au Samedi : <strong>11h30 – 14h30 / 17h30 – 23h00</strong></p>
+<p>Dimanche : <strong>Fermé</strong></p>
 
 <!-- Livraison -->
 <h2>🚚 Livraison</h2>
 <p>Livraison dans un rayon de <strong>15 km</strong>.</p>
-<p>Du lundi au jeudi : <strong>12h–14h / 17h–22h</strong><br>
-   Vendredi & samedi : <strong>12h–14h30</strong></p>
+<p>Du lundi au jeudi : <strong>12h–14h / 17h–22h</strong></p>
+<p>Vendredi & samedi : <strong>12h–14h30</strong></p>
 
 <!-- Adresse -->
 <h2>📍 Adresse</h2>
@@ -161,10 +182,10 @@ t<!doctype html>
 
 <!-- Réseaux -->
 <h2>📸 Nous suivre sur Instagram</h2>
-<a class="button" href="https://www.instagram.com/maison_de_linde/" target="_blank">Voir Instagram</a>
+<a class="button-green" href="https://www.instagram.com/maison_de_linde/" target="_blank">Voir Instagram</a>
 
 <h2>⭐ TripAdvisor</h2>
-<a class="button" href="https://www.tripadvisor.fr/Restaurant_Review-g608753-d4743777-Reviews-Maison_De_L_inde-Saint_Louis_Haut_Rhin_Grand_Est.html" target="_blank">
+<a class="button-green" href="https://www.tripadvisor.fr/Restaurant_Review-g608753-d4743777-Reviews-Maison_De_L_inde-Saint_Louis_Haut_Rhin_Grand_Est.html" target="_blank">
   Voir les avis TripAdvisor
 </a>
 

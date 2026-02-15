@@ -96,17 +96,6 @@ body::before {
   transform: scale(1.05);
 }
 
-/* Version mobile */
-@media (max-width: 900px) {
-  .reservations-button {
-    top: 15px;
-    left: 15px;
-    padding: 7px 12px;
-    font-size: 0.8rem;
-    border-radius: 40px;
-  }
-}
-
 .menu-button:hover {
   background: #b22222;
   transform: scale(1.05);

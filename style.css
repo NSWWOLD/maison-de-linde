@@ -217,7 +217,7 @@ header h1::after {
 }
 
 .subinfo-highlight {
-  color: var(--gold);     /* doré pour la ligne du dessous */
+  color: var(--blue);     /* doré pour la ligne du dessous */
   font-weight: 700;
 }
 

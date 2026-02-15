@@ -359,3 +359,9 @@ footer a {
   text-decoration: none;
   font-weight: 700;
 }
+/* Couleur vert empire pour les deux premières lignes du footer */
+footer p:first-child,
+footer p:nth-child(2),
+footer p:first-child strong {
+  color: var(--green-empire);
+}

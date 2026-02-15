@@ -73,6 +73,39 @@ body::before {
   transition: all 0.25s ease;
   backdrop-filter: blur(6px);
 }
+/* Bouton Réservations en haut à gauche — identique au bouton Menu */
+.reservations-button {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  background: var(--red); /* même couleur que Menu */
+  color: white;
+  padding: 8px 14px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.reservations-button:hover {
+  background: #b22222; /* même hover que Menu */
+  transform: scale(1.05);
+}
+
+/* Version mobile */
+@media (max-width: 900px) {
+  .reservations-button {
+    top: 15px;
+    left: 15px;
+    padding: 7px 12px;
+    font-size: 0.8rem;
+    border-radius: 40px;
+  }
+}
 
 .menu-button:hover {
   background: #b22222;

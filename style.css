@@ -104,16 +104,16 @@ body::before {
 @media (max-width: 900px) {
 
   .menu-button {
-    top: 15px;
-    right: 15px;
-    padding: 7px 12px;
+    top: 13px;
+    right: 13px;
+    padding: 6px 11px;
     font-size: 0.8rem;
   }
 
   .reservations-button {
-    top: 15px;
-    left: 15px;
-    padding: 7px 12px;
+    top: 13px;
+    left: 13px;
+    padding: 6px 10.5px;
     font-size: 0.8rem;
   }
 

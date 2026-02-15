@@ -118,6 +118,18 @@ body::before {
   }
 
 }
+/* Version mobile : texte plus court pour éviter de gêner le titre */
+@media (max-width: 600px) {
+  .reservations-button {
+    font-size: 0; /* cache le texte original */
+  }
+
+  .reservations-button::after {
+    content: "Réserver"; /* texte plus court */
+    font-size: 0.8rem;
+    color: white;
+  }
+}
 
 /* =========================
    Popup livraison

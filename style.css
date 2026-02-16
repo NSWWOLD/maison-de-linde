@@ -371,6 +371,10 @@ footer p:first-child strong {
 footer p:last-child {
   color: var(--green-empire);
 }
+footer p:nth-child(5) {
+  color: var(--green-empire);
+  font-weight: 600;
+}
 
 .btn-retour-menu {
   position: fixed;

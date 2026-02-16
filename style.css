@@ -385,7 +385,7 @@ footer p:last-child {
   z-index: 9999;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
+/* update */
 .btn-retour-menu:hover {
   transform: scale(1.05);
   opacity: 0.9;

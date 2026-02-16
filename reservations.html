@@ -110,6 +110,28 @@
       outline: none !important;
       border: none !important;
     }
+
+    /* ⭐ Correction du bouton Retour au menu */
+    .btn-retour-menu {
+      position: fixed;
+      top: 22px;
+      right: 22px;
+      background: #8b0505; /* rouge bordeaux */
+      color: white;
+      padding: 10px 16px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      z-index: 9999;
+      transition: all 0.25s ease;
+    }
+
+    .btn-retour-menu:hover {
+      background: #b22222;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
@@ -188,7 +210,9 @@
 <a class="button-green" href="https://www.tripadvisor.fr/Restaurant_Review-g608753-d4743777-Reviews-Maison_De_L_inde-Saint_Louis_Haut_Rhin_Grand_Est.html" target="_blank">
   Voir les avis TripAdvisor
 </a>
+
+<!-- ⭐ Bouton Retour au menu corrigé -->
 <a href="index.html#menu" class="btn-retour-menu">🍽️ Retour au menu</a>
+
 </body>
 </html>
-

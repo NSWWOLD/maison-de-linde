@@ -5,214 +5,114 @@
   <title>RÉSERVATIONS — MAISON DE L'INDE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 23px;
-      line-height: 1.7;
-      max-width: 900px;
-      margin: auto;
-      color: #222;
-      background: #faf4ef; /* beige rosé encore plus léger */
-    }
-
-    h1 {
-      color: #8B0000; /* rouge bordeaux profond */
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
-
-    h2 {
-      color: #8B0000;
-      margin-top: 35px;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      border-left: 4px solid #8B0000;
-      padding-left: 10px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 18px;
-      background: #8B0000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: #600000;
-    }
-
-    .button-green {
-      display: inline-block;
-      padding: 12px 18px;
-      background: #0f7b4f; /* ton vert */
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    .button-green:hover {
-      background: #0c5f3d;
-    }
-
-    form {
-      margin-top: 15px;
-      background: #ffffff; /* corrigé */
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    form button {
-      background: #8B0000;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-
-    form button:hover {
-      background: #600000;
-    }
-
-    .map {
-      margin-top: 15px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    /* Supprimer le contour bleu autour des boutons */
-    a.button, a.button-green {
-      outline: none !important;
-      border: none !important;
-    }
-
-    a.button:focus, a.button-green:focus {
-      outline: none !important;
-      border: none !important;
-    }
-
-    /* ⭐ Correction du bouton Retour au menu */
-    .btn-retour-menu {
-      position: fixed;
-      top: 22px;
-      right: 22px;
-      background: #8b0505; /* rouge bordeaux */
-      color: white;
-      padding: 10px 16px;
-      border-radius: 40px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      z-index: 9999;
-      transition: all 0.25s ease;
-    }
-
-    .btn-retour-menu:hover {
-      background: #b22222;
-      transform: scale(1.05);
-    }
-  </style>
+  <!-- Style global du site -->
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 
 <body>
 
-<h1>RÉSERVATIONS</h1>
+  <!-- Boutons globaux comme sur la page d’accueil -->
+  <a href="#menu" class="menu-button">Menu</a>
+  <a href="/reservations.html" class="reservations-button">Infos+</a>
 
-<!-- Téléphone -->
-<h2>📞 Réserver par téléphone</h2>
-<p>Appelez-nous directement :</p>
-<p><strong>+33 9 53 41 65 14</strong></p>
-<a class="button" href="tel:+33953416514">📞 Appeler maintenant</a>
+  <div class="wrap">
+    <header>
+      <h1>RÉSERVATIONS</h1>
+    </header>
 
-<!-- Email -->
-<h2>✉️ Réserver par email</h2>
-<p>“Si vous ne recevez pas de confirmation rapidement, appelez-nous au 09 53 41 65 14”</p>
-<a class="button-green" href="mailto:AZER6851@OUTLOOK.FR">✉️ Envoyer un email</a>
+    <!-- Téléphone -->
+    <section>
+      <h2>📞 Réserver par téléphone</h2>
+      <p>Appelez-nous directement :</p>
+      <p><strong>+33 9 53 41 65 14</strong></p>
+      <a class="button" href="tel:+33953416514">📞 Appeler maintenant</a>
+    </section>
 
-<!-- Formulaire -->
-<h2>📝 Formulaire de réservation</h2>
-<form action="mailto:AZER6851@OUTLOOK.FR" method="post" enctype="text/plain">
-  <label>Nom :</label>
-  <input type="text" name="Nom" required>
+    <!-- Email -->
+    <section>
+      <h2>✉️ Réserver par email</h2>
+      <p>« Si vous ne recevez pas de confirmation rapidement, appelez-nous au 09 53 41 65 14 »</p>
+      <a class="button-green" href="mailto:AZER6851@OUTLOOK.FR">✉️ Envoyer un email</a>
+    </section>
 
-  <label>Téléphone :</label>
-  <input type="text" name="Téléphone" required>
+    <!-- Formulaire -->
+    <section>
+      <h2>📝 Formulaire de réservation</h2>
+      <form action="mailto:AZER6851@OUTLOOK.FR" method="post" enctype="text/plain">
+        <label>Nom :</label>
+        <input type="text" name="Nom" required>
 
-  <label>Date :</label>
-  <input type="date" name="Date" required>
+        <label>Téléphone :</label>
+        <input type="text" name="Téléphone" required>
 
-  <label>Heure :</label>
-  <input type="time" name="Heure" required>
+        <label>Date :</label>
+        <input type="date" name="Date" required>
 
-  <label>Nombre de personnes :</label>
-  <input type="number" name="Personnes" required>
+        <label>Heure :</label>
+        <input type="time" name="Heure" required>
 
-  <label>Message (optionnel) :</label>
-  <textarea name="Message" rows="4"></textarea>
+        <label>Nombre de personnes :</label>
+        <input type="number" name="Personnes" required>
 
-  <button type="submit">Envoyer la réservation</button>
-</form>
+        <label>Message (optionnel) :</label>
+        <textarea name="Message" rows="4"></textarea>
 
-<!-- Horaires -->
-<h2>🕒 Horaires d’ouverture</h2>
-<p>Lundi au Jeudi : <strong>11h30 – 14h30 / 17h30 – 22h00</strong></p>
-<p>Vendredi au Samedi : <strong>11h30 – 14h30 / 17h30 – 23h00</strong></p>
-<p>Dimanche : <strong>Fermé</strong></p>
+        <button type="submit">Envoyer la réservation</button>
+      </form>
+    </section>
 
-<!-- Livraison -->
-<h2>🚚 Livraison</h2>
-<p>Livraison dans un rayon de <strong>15 km</strong>.</p>
-<p>Du lundi au jeudi : <strong>12h–14h / 17h–22h</strong></p>
-<p>Vendredi & samedi : <strong>12h–14h30</strong></p>
+    <!-- Horaires -->
+    <section>
+      <h2>🕒 Horaires d’ouverture</h2>
+      <p>Lundi au Jeudi : <strong>11h30 – 14h30 / 17h30 – 22h00</strong></p>
+      <p>Vendredi au Samedi : <strong>11h30 – 14h30 / 17h30 – 23h00</strong></p>
+      <p>Dimanche : <strong>Fermé</strong></p>
+    </section>
 
-<!-- Adresse -->
-<h2>📍 Adresse</h2>
-<p>60 Avenue du Général de Gaulle<br>
-   68300 Saint-Louis</p>
+    <!-- Livraison -->
+    <section>
+      <h2>🚚 Livraison</h2>
+      <p>Livraison dans un rayon de <strong>15 km</strong>.</p>
+      <p>Du lundi au jeudi : <strong>12h–14h / 17h–22h</strong></p>
+      <p>Vendredi & samedi : <strong>12h–14h30</strong></p>
+    </section>
 
-<a class="button" href="https://maps.google.com/?q=Maison+de+l'Inde+Saint-Louis" target="_blank">
-  📍 Ouvrir dans Google Maps
-</a>
+    <!-- Adresse -->
+    <section>
+      <h2>📍 Adresse</h2>
+      <p>60 Avenue du Général de Gaulle<br>
+        68300 Saint-Louis</p>
 
-<!-- Carte -->
-<h2>🗺️ Nous trouver</h2>
-<div class="map">
-  <iframe src="https://www.google.com/maps?q=60+Avenue+du+Général+de+Gaulle+Saint-Louis&output=embed"
-          width="100%" height="300" style="border:0;" loading="lazy"></iframe>
-</div>
+      <a class="button" href="https://maps.google.com/?q=Maison+de+l'Inde+Saint-Louis" target="_blank">
+        📍 Ouvrir dans Google Maps
+      </a>
+    </section>
 
-<!-- Réseaux -->
-<h2>📸 Nous suivre sur Instagram</h2>
-<a class="button-green" href="https://www.instagram.com/maison_de_linde/" target="_blank">Voir Instagram</a>
+    <!-- Carte -->
+    <section>
+      <h2>🗺️ Nous trouver</h2>
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=60+Avenue+du+Général+de+Gaulle+Saint-Louis&output=embed"
+                width="100%" height="300" style="border:0;" loading="lazy"></iframe>
+      </div>
+    </section>
 
-<h2>⭐ TripAdvisor</h2>
-<a class="button-green" href="https://www.tripadvisor.fr/Restaurant_Review-g608753-d4743777-Reviews-Maison_De_L_inde-Saint_Louis_Haut_Rhin_Grand_Est.html" target="_blank">
-  Voir les avis TripAdvisor
-</a>
+    <!-- Réseaux -->
+    <section>
+      <h2>📸 Nous suivre sur Instagram</h2>
+      <a class="button-green" href="https://www.instagram.com/maison_de_linde/" target="_blank">Voir Instagram</a>
+    </section>
 
-<!-- ⭐ Bouton Retour au menu corrigé -->
-<a href="index.html#menu" class="btn-retour-menu">🍽️ Retour au menu</a>
+    <section>
+      <h2>⭐ TripAdvisor</h2>
+      <a class="button-green" href="https://www.tripadvisor.fr/Restaurant_Review-g608753-d4743777-Reviews-Maison_De_L_inde-Saint_Louis_Haut_Rhin_Grand_Est.html" target="_blank">
+        Voir les avis TripAdvisor
+      </a>
+    </section>
+  </div>
+
+  <!-- Bouton Retour au menu (utilise le style global .btn-retour-menu) -->
+  <a href="index.html#menu" class="btn-retour-menu">🍽️ Retour au menu</a>
 
 </body>
 </html>

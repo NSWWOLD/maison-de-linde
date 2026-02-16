@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="style.css?v=2">
 
   <style>
-    /* Onglets élégants */
+    /* Boîtes élégantes */
     .box {
-      background: #fffaf3;
+      background: var(--card);
       border: 1px solid #e5d7b8;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 25px 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 25px;
+      border-radius: 16px;
+      margin: 35px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
     .box h2 {
@@ -24,23 +24,24 @@
       color: var(--red);
       font-family: "Playfair Display", serif;
       border-left: 4px solid var(--gold);
-      padding-left: 10px;
+      padding-left: 12px;
+      font-size: 1.5rem;
     }
 
-    /* Tableau email */
+    /* Tableau email premium */
     .email-table {
       width: 100%;
       max-width: 420px;
       margin: 0 auto;
       border-collapse: collapse;
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
     }
 
     .email-table td {
-      padding: 12px 15px;
+      padding: 14px 18px;
       border-bottom: 1px solid #eee;
       font-size: 1rem;
     }
@@ -53,15 +54,51 @@
       display: inline-block;
       background: var(--green-empire);
       color: white;
-      padding: 10px 16px;
+      padding: 12px 18px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
-      margin-top: 12px;
+      margin-top: 15px;
     }
 
     .email-btn:hover {
       background: #06351e;
+    }
+
+    /* Formulaire réduit 1.3x */
+    form.form-small {
+      max-width: 70%;
+      margin: 0 auto;
+      padding: 18px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    form.form-small input,
+    form.form-small textarea {
+      padding: 8px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    form.form-small button {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      background: var(--red);
+      color: white;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    form.form-small button:hover {
+      background: #b22222;
     }
 
     /* Bouton retour */
@@ -69,7 +106,7 @@
       position: fixed;
       top: 22px;
       right: 22px;
-      background: #8b0505;
+      background: var(--red);
       color: white;
       padding: 10px 16px;
       border-radius: 40px;
@@ -84,6 +121,32 @@
     .btn-retour-menu:hover {
       background: #b22222;
       transform: scale(1.05);
+    }
+
+    /* Réseaux côte à côte */
+    .social-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social-box {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      border: 1px solid #e5d7b8;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .social-box h3 {
+      margin-top: 0;
+      color: var(--red);
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
     }
   </style>
 </head>
@@ -106,7 +169,7 @@
     <a class="button" href="tel:+33953416514">📞 Appeler maintenant</a>
   </div>
 
-  <!-- Email sous forme de tableau -->
+  <!-- Email -->
   <div class="box">
     <h2>✉️ Réserver par email</h2>
 
@@ -132,7 +195,7 @@
   <div class="box">
     <h2>📝 Formulaire de réservation</h2>
 
-    <form action="mailto:AZER6851@OUTLOOK.FR" method="post" enctype="text/plain">
+    <form action="mailto:AZER6851@OUTLOOK.FR" method="post" enctype="text/plain" class="form-small">
       <label>Nom :</label>
       <input type="text" name="Nom" required>
 
@@ -149,7 +212,7 @@
       <input type="number" name="Personnes" required>
 
       <label>Message (optionnel) :</label>
-      <textarea name="Message" rows="4"></textarea>
+      <textarea name="Message" rows="3"></textarea>
 
       <button type="submit">Envoyer la réservation</button>
     </form>
@@ -190,17 +253,27 @@
     </div>
   </div>
 
-  <!-- Réseaux -->
+  <!-- Nos réseaux -->
   <div class="box">
-    <h2>📸 Instagram</h2>
-    <a class="button-green" href="https://www.instagram.com/maison_de_linde/" target="_blank">Voir Instagram</a>
-  </div>
+    <h2>📘 Nos réseaux</h2>
 
-  <div class="box">
-    <h2>⭐ TripAdvisor</h2>
-    <a class="button-green" href="https://www.tripadvisor.fr/Restaurant_Review-g608753-d4743777-Reviews-Maison_De_L_inde-Saint_Louis_Haut_Rhin_Grand_Est.html" target="_blank">
-      Voir les avis TripAdvisor
-    </a>
+    <div class="social-row">
+
+      <div class="social-box">
+        <h3>📷 Instagram</h3>
+        <a class="button-green" href="https://www.instagram.com/maison_de_linde/" target="_blank">
+          Voir Instagram
+        </a>
+      </div>
+
+      <div class="social-box">
+        <h3>⭐ TripAdvisor</h3>
+        <a class="button-green" href="https://www.tripadvisor.fr/Restaurant_Review-g608753-d4743777-Reviews-Maison_De_L_inde-Saint_Louis_Haut_Rhin_Grand_Est.html" target="_blank">
+          Voir les avis TripAdvisor
+        </a>
+      </div>
+
+    </div>
   </div>
 
 </div>

@@ -367,10 +367,6 @@ footer p:first-child strong {
   color: var(--green-empire);
 }
 
-/* Couleur vert empire pour la dernière ligne du footer */
-footer p:last-child {
-  color: var(--green-empire);
-}
 footer p:nth-child(5) {
   color: var(--green-empire);
   font-weight: 600;

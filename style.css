@@ -391,3 +391,20 @@ footer p:last-child {
   transform: scale(1.05);
   opacity: 0.9;
 }
+.button-green {
+  display: inline-block;
+  background: var(--green-empire);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+}
+
+.button-green:hover {
+  background: #06351e; /* vert empire foncé */
+  transform: scale(1.05);
+}

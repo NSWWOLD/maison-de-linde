@@ -172,35 +172,37 @@
 
   <!-- Email + Formulaire fusionnés -->
   <div class="box">
-    <h2>✉️ Réserver par email & formulaire</h2>
+  <h2>✉️ Réserver par email & formulaire</h2>
 
-   <a class="button-green" href="mailto:AZER6851@OUTLOOK.FR">📧 Envoyer un email</a>
+  <a class="button-green" href="mailto:AZER6851@OUTLOOK.FR">📧 Envoyer un email</a>
 
+  <p style="margin-top:10px; font-size:0.9rem; color:#444;">
+    Réponse rapide (moins de 2h)
+  </p>
 
-    <br><br>
+  <form action="mailto:AZER6851@OUTLOOK.FR" method="post" enctype="text/plain" class="form-small">
+    <label>Nom :</label>
+    <input type="text" name="Nom" required>
 
-    <form action="mailto:AZER6851@OUTLOOK.FR" method="post" enctype="text/plain" class="form-small">
-      <label>Nom :</label>
-      <input type="text" name="Nom" required>
+    <label>Téléphone :</label>
+    <input type="text" name="Téléphone" required>
 
-      <label>Téléphone :</label>
-      <input type="text" name="Téléphone" required>
+    <label>Date :</label>
+    <input type="date" name="Date" required>
 
-      <label>Date :</label>
-      <input type="date" name="Date" required>
+    <label>Heure :</label>
+    <input type="time" name="Heure" required>
 
-      <label>Heure :</label>
-      <input type="time" name="Heure" required>
+    <label>Nombre de personnes :</label>
+    <input type="number" name="Personnes" required>
 
-      <label>Nombre de personnes :</label>
-      <input type="number" name="Personnes" required>
+    <label>Message (optionnel) :</label>
+    <textarea name="Message" rows="3"></textarea>
 
-      <label>Message (optionnel) :</label>
-      <textarea name="Message" rows="3"></textarea>
+    <button type="submit">Envoyer la réservation</button>
+  </form>
+</div>
 
-      <button type="submit">Envoyer la réservation</button>
-    </form>
-  </div>
 
   <!-- Horaires -->
   <div class="box">

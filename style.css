@@ -32,7 +32,7 @@ body {
   background: var(--bg);
 
   /* Nouveau motif discret */
-  background-image: url("assets/taj14.svg"); /* ou .png selon ton fichier */
+  background-image: url("assets/taj14.jpg"); 
   background-repeat: repeat;
   background-size: 260px; /* Ajuste si tu veux plus petit ou plus grand */
   background-attachment: fixed;
@@ -45,7 +45,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("assets/tajmahal.svg") center center no-repeat;
+  background: url("assets/tajmahal.jpg") center center no-repeat;
   background-size: 65%;
   opacity: 0.04;
   pointer-events: none;

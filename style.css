@@ -27,15 +27,20 @@
 
 body {
   font-family: "Noto Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Fond beige */
   background: var(--bg);
-  background-image: url("assets/kashmir-floral.svg");
+
+  /* Nouveau motif discret */
+  background-image: url("assets/taj14.svg"); /* ou .png selon ton fichier */
   background-repeat: repeat;
-  background-size: 300px;
+  background-size: 260px; /* Ajuste si tu veux plus petit ou plus grand */
   background-attachment: fixed;
+
   color: #222;
 }
 
-/* Voile Taj Mahal en fond */
+/* Voile Taj Mahal en fond (on garde, c’est premium et discret) */
 body::before {
   content: "";
   position: fixed;
@@ -46,7 +51,6 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
-
 .wrap {
   max-width: 980px;
   margin: 0 auto;

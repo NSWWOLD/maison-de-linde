@@ -51,6 +51,16 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
+/* Voile beige doux comme avant */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 245, 230, 0.55); /* beige + opacité douce */
+  pointer-events: none;
+  z-index: 0;
+}
+
 .wrap {
   max-width: 980px;
   margin: 0 auto;

@@ -374,6 +374,7 @@ footer a {
   text-decoration: none;
   font-weight: 700;
 }
+
 /* Couleur vert empire pour les deux premières lignes du footer */
 footer p:first-child,
 footer p:nth-child(2),
@@ -385,6 +386,7 @@ footer p:nth-child(5) {
   color: var(--green-empire);
   font-weight: 600;
 }
+
 /* Carte arrondie autour du footer */
 .footer-shell {
   background: var(--card);
@@ -392,9 +394,12 @@ footer p:nth-child(5) {
   box-shadow: 0 15px 40px rgba(0,0,0,0.06);
   padding: 40px 30px;
   margin: 40px auto 30px;
-  max-width: 1100px; /* même largeur que tes sections */
+  max-width: 1100px;
+  position: relative; /* ← indispensable */
+  z-index: 10;        /* ← indispensable */
 }
 
+/* Bouton retour menu */
 .btn-retour-menu {
   position: fixed;
   top: 120px;
@@ -409,11 +414,13 @@ footer p:nth-child(5) {
   z-index: 9999;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-/* update */
+
 .btn-retour-menu:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
+/* Bouton vert */
 .button-green {
   display: inline-block;
   background: var(--green-empire);
@@ -428,6 +435,6 @@ footer p:nth-child(5) {
 }
 
 .button-green:hover {
-  background: #06351e; /* vert empire foncé */
+  background: #06351e;
   transform: scale(1.05);
 }

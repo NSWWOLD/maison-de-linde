@@ -385,6 +385,16 @@ footer p:nth-child(5) {
   color: var(--green-empire);
   font-weight: 600;
 }
+/* Bloc footer lisible comme les autres sections */
+.footer-block {
+  background: var(--card); /* même fond que les sections */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
 
 .btn-retour-menu {
   position: fixed;

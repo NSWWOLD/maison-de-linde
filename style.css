@@ -362,26 +362,30 @@ header h1::after {
 /* =========================
    Footer
 ========================= */
+
+/* Footer interne */
 footer {
-  margin: 70px 0 30px;
+  margin: 20px 0 10px;
   text-align: center;
   font-size: 1.1rem;
-  color: #555;
+  color: #555; /* gris foncé lisible */
 }
 
+/* Liens rouges */
 footer a {
   color: var(--red);
   text-decoration: none;
   font-weight: 700;
 }
 
-/* Couleur vert empire pour les deux premières lignes du footer */
+/* Titre + adresse en vert empire */
 footer p:first-child,
 footer p:nth-child(2),
 footer p:first-child strong {
   color: var(--green-empire);
 }
 
+/* "Site :" en vert empire */
 footer p:nth-child(5) {
   color: var(--green-empire);
   font-weight: 600;
@@ -395,16 +399,8 @@ footer p:nth-child(5) {
   padding: 25px 25px;
   margin: 25px auto 25px;
   max-width: 1100px;
-  position: relative; /* ← indispensable */
-  z-index: 10;        /* ← indispensable */
-}
-
-/* Footer interne */
-footer {
-  margin: 20px 0 10px;      /* ↓ réduit (70px → 20px) */
-  text-align: center;
-  font-size: 1.05rem;       /* ↓ légèrement réduit */
-  color: #555;
+  position: relative;
+  z-index: 20; /* passe DEVANT le motif */
 }
 
 /* Bouton retour menu */

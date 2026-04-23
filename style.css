@@ -360,7 +360,7 @@ header h1::after {
 }
 
 /* =========================
-   Footer – Couleurs exactes
+   Footer
 ========================= */
 
 footer {
@@ -370,28 +370,30 @@ footer {
   color: #555; /* gris par défaut */
 }
 
+footer a {
+  text-decoration: none;
+}
+
 /* Rouge empire */
-footer p:nth-child(3),  /* Téléphone */
-footer p:nth-child(7),  /* Site : */
-footer p:nth-child(8) a /* Instagram */
-{
+.f-phone a,
+.f-site a,
+.f-instagram {
   color: var(--red);
   font-weight: 700;
 }
 
 /* Vert empire */
-footer p:nth-child(1),  /* MAISON DE L’INDE */
-footer p:nth-child(2),  /* Adresse */
-footer p:nth-child(4),  /* Horaires lun–jeu */
-footer p:nth-child(5),  /* Horaires ven–sam */
-footer p:nth-child(8)   /* Restaurant & Traiteur */
-{
+.f-title,
+.f-address,
+.f-hours,
+.f-services,
+.f-closed {
   color: var(--green-empire);
   font-weight: 600;
 }
 
-/* Mentions légales (dernier p) */
-footer p:last-child {
+/* Mentions légales */
+.f-legal a {
   color: #555;
   font-size: 0.9rem;
 }

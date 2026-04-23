@@ -360,48 +360,54 @@ header h1::after {
 }
 
 /* =========================
-   Footer
+   Footer – Couleurs exactes
 ========================= */
 
-/* Footer interne */
 footer {
   margin: 20px 0 10px;
   text-align: center;
   font-size: 1.1rem;
-  color: #555; /* gris foncé lisible */
+  color: #555; /* gris par défaut */
 }
 
-/* Liens rouges */
-footer a {
+/* Rouge empire */
+footer p:nth-child(3),  /* Téléphone */
+footer p:nth-child(7),  /* Site : */
+footer p:nth-child(8) a /* Instagram */
+{
   color: var(--red);
-  text-decoration: none;
   font-weight: 700;
 }
 
-/* Titre + adresse en vert empire */
-footer p:first-child,
-footer p:nth-child(2),
-footer p:first-child strong {
-  color: var(--green-empire);
-}
-
-/* "Site :" en vert empire */
-footer p:nth-child(5) {
+/* Vert empire */
+footer p:nth-child(1),  /* MAISON DE L’INDE */
+footer p:nth-child(2),  /* Adresse */
+footer p:nth-child(4),  /* Horaires lun–jeu */
+footer p:nth-child(5),  /* Horaires ven–sam */
+footer p:nth-child(8)   /* Restaurant & Traiteur */
+{
   color: var(--green-empire);
   font-weight: 600;
 }
 
-/* Carte arrondie autour du footer */
+/* Mentions légales (dernier p) */
+footer p:last-child {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Bloc arrondi */
 .footer-shell {
   background: var(--card);
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-  padding: 25px 25px;
-  margin: 25px auto 25px;
+  padding: 25px;
+  margin: 25px auto;
   max-width: 1100px;
   position: relative;
-  z-index: 20; /* passe DEVANT le motif */
+  z-index: 20;
 }
+
 
 /* Bouton retour menu */
 .btn-retour-menu {

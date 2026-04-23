@@ -56,7 +56,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255, 245, 230, 0.90); /* beige + opacité douce */
+  background: rgba(255, 245, 230, 0.75); /* beige + opacité douce */
   pointer-events: none;
   z-index: 0;
 }

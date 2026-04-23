@@ -392,11 +392,19 @@ footer p:nth-child(5) {
   background: var(--card);
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-  padding: 40px 30px;
-  margin: 40px auto 30px;
+  padding: 25px 25px;
+  margin: 25px auto 25px;
   max-width: 1100px;
   position: relative; /* ← indispensable */
   z-index: 10;        /* ← indispensable */
+}
+
+/* Footer interne */
+footer {
+  margin: 20px 0 10px;      /* ↓ réduit (70px → 20px) */
+  text-align: center;
+  font-size: 1.05rem;       /* ↓ légèrement réduit */
+  color: #555;
 }
 
 /* Bouton retour menu */
